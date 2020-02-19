@@ -5,26 +5,28 @@
       <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/microsoft-onenote-2019.png" >
       <style>
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Raleway:300,400');
+        *{outline:0;
+        	outline: 0px;}
 body{
   text-align:center;
   font-family: 'Open Sans', sans-serif;
 }
-.button {
+button {
   background-color: #0080FF; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
-  float: left;
+  border-radius: 0px;
 }
 
-.button:hover {
-  background-color: #238ffa;
+button:hover {
+  background-color: #1b8dfa;
 }
+
 .img{
   margin-top:30px;
 }
@@ -87,17 +89,22 @@ a{
 <path opacity="0.3" fill="#333339" d="M217.039,19.676c1.234,0,1.916-0.672,1.916-1.359c0-0.414-0.203-0.872-1.016-1.072  l-2.686-0.673c-2.163-0.544-2.556-1.716-2.556-2.818c0-2.288,2.149-3.146,4.167-3.146c1.858,0,4.05,1.029,4.05,2.402  c0,0.588-0.508,0.93-1.089,0.93c-1.103,0-0.9-1.53-3.121-1.53c-1.103,0-1.714,0.501-1.714,1.216c0,0.715,0.871,0.943,1.627,1.116  l1.988,0.442c2.177,0.486,2.73,1.76,2.73,2.961c0,1.859-1.423,3.247-4.297,3.247c-3.02,0-4.37-1.488-4.37-2.603  c0-0.572,0.421-0.973,1.002-0.973C214.963,17.816,214.628,19.676,217.039,19.676 M213.027,7C210.251,7,208,9.25,208,12.027  c0,0.885,0.229,1.717,0.63,2.439c-0.091,0.497-0.135,1.012-0.135,1.536c0,4.699,3.807,8.505,8.505,8.505  c0.524,0,1.036-0.047,1.534-0.138c0.722,0.401,1.554,0.63,2.439,0.63c2.777,0,5.027-2.251,5.027-5.027  c0-0.885-0.228-1.717-0.63-2.439c0.091-0.497,0.136-1.008,0.136-1.532c0-4.699-3.807-8.51-8.506-8.51  c-0.524,0-1.037,0.047-1.534,0.138C214.744,7.229,213.912,7,213.027,7"/>
 <path opacity="0.3" fill="#333339" d="M0,21.437L0,21.437 M10,7l-9.974,3.625H0v10.812l2.968-1.611v-8.794L10,9.835v12.936L0,21.437  L10,25l4.995-1.483v-0.018V8.545L10,7"/>
   </svg></div>
-
-    <h1>Microsoft Identity Python Web App</h1>
-
-    <li><a href='{{ auth_url }}'>Sign In</a></li>
+  <br>
+<h3 id='onenote-msg' style='font-weight:100 !important;'>OneNote App</h3>
+    <a href='/pagescontent' onclick="myFunction()">
+      <img class='onenote-icon' src='https://pbs.twimg.com/profile_images/1128421627660627968/ikCJDPLz_400x400.png' style='width:60px; height:60px;'></img></a>
+      
+      <div id='button-wrapper' style='margin-top:20px; width:100%; height:50px;'> 
+    <a href='{{ auth_url }}'><button>Sign In</button></a>
+</div>
 
     {% if config.get("B2C_RESET_PASSWORD_AUTHORITY") %}
     <li><a href='{{_build_auth_url(authority=config["B2C_RESET_PASSWORD_AUTHORITY"])}}'>Reset Password</a></li>
     {% endif %}
 
     
-    <footer style="text-align: right">Powered by MSAL Python {{ version }}</footer>
+   <footer style="text-align: right;  position: absolute;  bottom: 0;  right: 0;   margin-right: 20px;  margin-bottom: 20px;">Powered by MSAL Python {{ version }}</footer>
+      
 </body>
 </html>
 
