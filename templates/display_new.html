@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/microsoft-onenote-2019.png" >
+      <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/10.0.0/css/fabric.min.css">
+      <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
+      <style>
+         /******** custom scrollbar *********/
+         /* width */
+         ::-webkit-scrollbar {
+         width: 10px;
+         }
+         /* Track */
+         ::-webkit-scrollbar-track {
+         background: #777; 
+         }
+         /* Handle */
+         ::-webkit-scrollbar-thumb {
+         background: #444; 
+         }
+         /* Handle on hover */
+         ::-webkit-scrollbar-thumb:hover {
+         background: #222; 
+         }
+         /******** timeline *********/
+         .timeline-wrapper::-webkit-scrollbar {
+         display: none;
+         }
+         .container::-webkit-scrollbar {
+         display: none;
+         }
+         @import url(https://fonts.googleapis.com/css?family=PT+Sans);
+         .container {
+         margin: 3rem 0;
+         width: 100%;
+         position: relative;
+         overflow-x: scroll;
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+         }
+         .container::-webkit-scrollbar {
+         height: 45px;
+         }
+         .container::-webkit-scrollbar-thumb {
+         background-color: transparent;
+         background-clip: content-box;
+         border-radius: 100%;
+         border: 20px solid transparent;
+         }
+         .entries {
+         margin-right: -10000px;
+         margin-left: 1rem;
+         }
+         .timeline {
+         box-sizing: border-box;
+         width: 10000vw;
+         height: 0.7rem;
+         background-color: #444;
+         background-clip: content-box;
+         border-width: 1px 0;
+         border-style: solid;
+         border-color: #555;
+         }
+         .entry {
+         float: left;
+         max-width: 170px;
+         position: relative;
+         text-align: center;
+         margin: 0 1rem;
+         margin-top: 0.7rem;
+         }
+         .entry .dot {
+         position: absolute;
+         width: 0.7rem;
+         height: 0.7rem;
+         background-color: powderblue;
+         left: 50%;
+         margin-left: -0.6rem;
+         margin-top: -17px;
+         border-radius: 100%;
+         box-sizing: border-box;
+         background-clip: content-box;
+         border-width: 0.16rem;
+         border-style: solid;
+         border-color: #fff;
+         -moz-transition: height 0.2s linear, width 0.2s linear, margin 0.2s linear, background-color 0.3s ease-out;
+         -o-transition: height 0.2s linear, width 0.2s linear, margin 0.2s linear, background-color 0.3s ease-out;
+         -webkit-transition: height 0.2s linear, width 0.2s linear, margin 0.2s linear, background-color 0.3s ease-out;
+         transition: height 0.2s linear, width 0.2s linear, margin 0.2s linear, background-color 0.3s ease-out;
+         }
+         .entry:hover .dot {
+         width: 1rem;
+         height: 1rem;
+         margin-left: -0.8rem;
+         margin-top:-19px;
+         }
+         .entry:hover .label {
+         margin-top: 2.5rem;
+         background-color: #d0e8e4;
+         border-bottom: 0.5rem solid transparent;
+         }
+         .label {
+         display: inline-block;
+         position: relative;
+         background-color: #E1F0EE;
+         background-clip: padding-box;
+         margin-top: 3rem;
+         padding: 0.4rem 0.8rem 0.8rem;
+         border-radius: 0.2rem;
+         -moz-transition: margin-top 0.2s linear, background-color 0.2s linear, border-bottom 0.2s linear;
+         -o-transition: margin-top 0.2s linear, background-color 0.2s linear, border-bottom 0.2s linear;
+         -webkit-transition: margin-top 0.2s linear, background-color 0.2s linear, border-bottom 0.2s linear;
+         transition: margin-top 0.2s linear, background-color 0.2s linear, border-bottom 0.2s linear;
+         border-bottom: 0 solid transparent;
+         }
+         .label .time {
+         text-transform: uppercase;
+         font-size: 0.7rem;
+         margin: 0 0 0.4rem;
+         padding: 0 0.3rem 0.3rem;
+         letter-spacing: 1px;
+         display: inline-block;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+         }
+         .label .detail {
+         font-size: 0.8rem;
+         }
+         .label:before {
+         content: '';
+         display: block;
+         /*position: absolute;*/
+         background-color: inherit;
+         background-clip: content-box;
+         box-sizing: border-box;
+         width: 1rem;
+         height: 1rem;
+         left: 50%;
+         margin-top: -0.9rem;
+         margin-left: 46%;
+         transform-origin: center;
+         -moz-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         -webkit-transform: rotate(45deg);
+         transform: rotate(45deg);
+         z-index: -1;
+         }
+         .label a {
+         color: #000;
+         text-decoration: none;
+         }
+         .label a:before {
+         content: '[';
+         }
+         .label a:after {
+         content: ']';
+         }
+         .entry.life .label {
+         background-color: #e1f0e4;
+         }
+         .entry.life .dot {
+         background-color: #e1f0e4;
+         }
+         .entry.life:hover .label {
+         background-color: #d0e8d5;
+         }
+         .entry.study .label {
+         background-color: #e1e8f0;
+         }
+         .entry.study .dot {
+         background-color: #e1e8f0;
+         }
+         .entry.study:hover .label {
+         background-color: #d0dbe8;
+         }
+         /******* expand button **********/
+         .collapsible {
+         background-color: #777;
+         color: white;
+         cursor: pointer;
+         padding: 18px;
+         border: none;
+         text-align: left;
+         outline: none;
+         margin-top: -10px;
+         height: 50px;
+         }
+         .active, .collapsible:hover {
+         background-color: #555;
+         }
+         .collapsible:after {
+         content: '\002B';
+         color: white;
+         font-weight: bold;
+         float: right;
+         margin-left: 5px;
+         }
+         .active:after {
+         content: "\2212";
+         }
+         .content {
+         padding: 0 18px;
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.2s ease-out;
+         background-color: #14161c;
+         }
+         #myTable{transition: margin 0.2s ease-out;}
+         #myTable1{transition: margin 0.2s ease-out;}
+
+         /****************************************************/
+         * {
+         font-family:Verdana,sans-serif;font-size:12px;line-height:1.5; margin:0px; outline: none; 
+         }
+         .ms-button{padding: 17px !important; background: #8a4386 !important;; text-decoration: none !important;}
+         .ms-button:hover{background: #753871 !important;}
+         .highlight{background:yellow;}
+         #text{opacity: 0;}
+         .myInput {
+         background:#efefef;
+         background-position: 10px 10px;
+         background-repeat: no-repeat;
+         width: 100%;
+         font-size: 16px;
+         padding: 12px 20px 12px 40px;
+         border: 0px solid #ddd;
+         }
+         #myTable {
+         border-collapse: collapse;
+         width: 100%;
+         border: 0px solid #ddd;
+         font-size: 18px;
+         }
+         #myTable th {
+         display: none;
+         }
+         #myTable th, #myTable td {
+         text-align: left;
+         padding: 12px;
+         }
+         #myTable tr {
+         border-bottom: 0px solid #ddd;
+         }
+         #myTable tr.header, #myTable tr:hover {
+         background-color: #f1f1f1;
+         }
+      </style>
+   </head>
+   <body>
+      <div style='width: 100%; height:40px; background: #8a4386 !important; margin-top: 0px; padding-left: 0px; padding-top: 8px; position:fixed;'>
+         <div id='icon-wrapper' style='height:50px; width:50px; float: left; background: #8a4386;  margin-top:-10px;'>
+            <a href='/pagescontent' onclick="myFunction()">
+      <img class='onenote-icon' src='https://i.ibb.co/pbsDLqR/ik-CJDPLz-400x400-2.png' style='width: 40px; height: 40px; margin-top: 5px; margin-left: 10px;'></img></a>
+         </div>
+         <p style='padding-top: 0px;  float:left;  margin-top: 7px;'><a id="download-link" class="ms-button ms-bgColor-themeDark ms-bgColor-themeDarker--hover ms-fontColor-white" href="javascript:window.history.go(-1)"><i class="ms-Icon ms-Icon--chevronThickLeft"></i> Back</a>
+         </p>
+         <p style='padding-top: 0px;  float:right;  margin-top: 7px;'><a id="download-link" class="ms-button ms-bgColor-themeDark ms-bgColor-themeDarker--hover ms-fontColor-white" ><i class="ms-Icon ms-Icon--person"></i> {{ user.get("name") }}</a>
+         </p>
+         <button class="collapsible ms-button ms-bgColor-themeDark ms-bgColor-themeDarker--hover ms-fontColor-white">Open Timeline</button>
+         <div class="content">
+            <div class="timeline-wrapper">
+               <div class='container'>
+                  <div class='timeline'>
+                     <div class='start'></div>
+                  </div>
+                  <div class='entries'>
+                     <!--<div class='entry project'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              April 2013
+                           </div>
+                           <div class='detail'>
+                              Launched <a href="https://youtube.com/charbytes">Charbytes</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry study'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              September 2012
+                           </div>
+                           <div class='detail'>
+                              Began Silversmithing degree @ London Met
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry project'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              July 2012
+                           </div>
+                           <div class='detail'>
+                              Launched <a href="http://pentatopejewellery.com">Pentatope</a> Jewellery
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry study'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              September 2011
+                           </div>
+                           <div class='detail'>
+                              Started Foundation degree @ Central Saint Martins
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry life'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              June 2011
+                           </div>
+                           <div class='detail'>
+                              Left School
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry project'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              May 2010
+                           </div>
+                           <div class='detail'>
+                              Released first tumblr theme <a href="http://pouretrebelle.com/post/563994536/ive-made-my-first-real-theme" title="no this is really bad don't click on it">Belle</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry project'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              September 2009
+                           </div>
+                           <div class='detail'>
+                              Started <a href="http://pouretrebelle.com">Pour &Ecirc;tre Belle</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry life'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              November 2005
+                           </div>
+                           <div class='detail'>
+                              Moved To Bath
+                           </div>
+                        </div>
+                     </div>
+                     <div class='entry life'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              July 1993
+                           </div>
+                           <div class='detail'>
+                              Born In Buckinghamshire
+                           </div>
+                        </div>
+                     </div>-->
+
+                      {%for i in range(0, tables.shape[0])%} 
+                          
+                         <div class='entry {{ ["life"] | random}}'>
+                        <div class='dot'></div>
+                        <div class='label'>
+                           <div class='time'>
+                              {{ '<br>'.join(tables.iloc[i,0].split('\n'))|safe }} 
+                           </div>
+                           <div class='detail'>
+                              <h5 style='font-size:10px;'>{{ '<br>'.join(tables.iloc[i,1].split('\n'))|safe }}</h5>
+                              <p style='font-size:10px;'>{{ '<br>'.join(tables.iloc[i,3].split('\n'))|safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+
+            {%endfor%} 
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title=" " style='height: 24px; color: #aaa; font-size: 12px; background: #1a1c24; margin-top:-48px; width: calc(100% - 200px); float:right;'>-->
+      <div id='note-content' style='overflow: hidden; width:100%;'>
+         <table id="myTable1" style='margin-top:45px; width:100%; position:fixed; margin-left:-3px;'>
+            <tr>
+               <td style='width:10%;'><input type="text" class="myInput"  id="myInput1" onkeyup="myFunction()" placeholder="Date..." title=" " style='height: 24px; color: #aaa; font-size: 12px; background: #1a1c24; '></td>
+               <td style='width:10%; padding-left:10px !important; '><input type="text" class="myInput"  id="myInput2" onkeyup="myFunction()" placeholder="Title..." title=" " style='height: 24px; color: #aaa; font-size: 12px; background: #1a1c24; '></td>
+               <td style='width:80%; padding-left:10px !important;'><input type="text" class="myInput" id="myInput" onkeyup="myFunction()" placeholder="Notes..." title=" " style='height: 24px; color: #aaa; font-size: 12px; background: #1a1c24; '></td>
+            </tr>
+         </table>
+         <table id="myTable" style='margin-top:96px; width:100%; '>
+            {%for i in range(0, tables.shape[0])%} 
+            <tr>
+               <td style='width:10%;'>{{ '<br>'.join(tables.iloc[i,0].split('\n'))|safe }} </td>
+               <td style='width:10%;'>{{ '<br>'.join(tables.iloc[i,1].split('\n'))|safe }} </td>
+               <td style='width:80%;'>{{ '<br>'.join(tables.iloc[i,3].split('\n'))|safe }} </td>
+            </tr>
+            {%endfor%} 
+         </table>
+         <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var df_header = document.getElementById("myTable1");
+            var df = document.getElementById("myTable");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                  df_header.style.marginTop = "45px";
+                  df.style.marginTop = "96px";
+            
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                  df_header.style.marginTop = content.scrollHeight + 45 + "px";
+                  df.style.marginTop = content.scrollHeight + 96 + "px";
+                } 
+              });
+            }
+         </script>
+         <script>
+            function myFunction() {
+              var input, filter, table, tr, td, i, txtValue;
+
+              var entries = document.getElementsByClassName("entry");
+              input = document.getElementById("myInput");
+              input1 = document.getElementById("myInput1");
+              input2 = document.getElementById("myInput2");
+              filter = input.value.toUpperCase();
+              filter1 = input1.value.toUpperCase();
+              filter2 = input2.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+              for (i = 0; i < tr.length; i++) {
+            
+                td = tr[i].getElementsByTagName("td")[2];
+                title = tr[i].getElementsByTagName("td")[1];
+                date = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtHTML = td.innerHTML.replace("<span class='highlight'>",'').replace("</span>",'').replace('<span class="highlight">','').replace("</span>",'');
+                  oldtextHTML = txtHTML.replace("<span class='highlight'>",'').replace("</span>",'').replace('<span class="highlight">','').replace("</span>",'');
+                  txtValue = td.textContent || td.innerText;
+                  titleValue = title.textContent || title.innerText;
+                  dateValue = date.textContent || date.innerText;
+            
+                    var index = txtHTML.toUpperCase().indexOf(filter);
+                    console.log('index: ',index)
+                    
+                    console.log('txtHTML: ', txtHTML)
+            
+                if (filter.length > 0)
+              {
+                //txtHTML = txtHTML.substring(0,index) + "<span class='highlight'>" + txtHTML.substring(index,index+filter.length) + "</span>" + txtHTML.substring(index + filter.length);
+                td.innerHTML = txtHTML.replace(filter.toLowerCase(), "<span class='highlight'>" + filter.toLowerCase() + "</span>");
+                txtHTML = oldtextHTML;  } 
+              else
+              {td.innerHTML = oldtextHTML;}
+                  
+                if (txtValue.toUpperCase().indexOf(filter) > -1 && titleValue.toUpperCase().indexOf(filter2) > -1  && dateValue.toUpperCase().indexOf(filter1) > -1)  {
+                console.log('txtValue: ', txtValue)
+                console.log('titleValue: ', titleValue)
+                console.log('input.value.toUpperCase(): ', input.value.toUpperCase())
+            
+              // if (input.value.toUpperCase().indexOf(txtValue.toUpperCase()) > -1 ) {
+            
+                    tr[i].style.display = "";
+                    entries[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                    entries[i].style.display = "none";
+                  }
+                }       
+              }
+            }
+         </script>
+      </div>
+   </body>
+</html>
