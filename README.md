@@ -1,7 +1,9 @@
 # OneNote App
 
 ## To run application:  
-Clone repo and run ```python app.py``` in the directory
+1. Clone repo 
+2. Add your ClientID and Secret in **config.py**
+3. Run ```python app.py``` in the directory
 
 ![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/ui_1.jpg)
 
