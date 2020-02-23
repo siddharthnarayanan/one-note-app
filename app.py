@@ -100,7 +100,7 @@ def get_todo_all(input_text, search_value='todo', window=50):
 
 
 def get_todo_color(input_text, search_value='todo', window=50):
-    return input_text.lower().replace('todo', "<h5 class='red-color'>todo</h5>")
+    return input_text.lower().replace('todo', "<h5>todo</h5>")
 
 
 def content(contentUrlList):

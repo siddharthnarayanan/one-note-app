@@ -36,7 +36,7 @@
          width: 100%;
          position: relative;
          overflow-x: scroll;
-         padding-top: 4rem;
+         padding-top: 2rem;
          padding-bottom: 2rem;
          }
          .container::-webkit-scrollbar {
@@ -410,11 +410,7 @@
             var df_header = document.getElementById("myTable1");
             var df = document.getElementById("myTable");
             var i;
-            var last_open_height=0;
-                 var content = document.getElementsByClassName("content")[0];
-            var content_style = window.getComputedStyle(content);
-
-                
+            
             for (i = 0; i < coll.length; i++) {
               coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
@@ -422,18 +418,12 @@
                 if (content.style.maxHeight){
                   content.style.maxHeight = null;
                   //df_header.style.marginTop = "45px";
-                  df.style.marginTop = "96px"; 
-                   last_open_height = parseInt(content_style['maxHeight'].replace('px',''));
-                  console.log("parseInt(content_style['maxHeight'].replace('px','')) CLOSE", content_style['maxHeight'].replace('px',''));
+                  df.style.marginTop = "96px";
             
                 } else {
-                 
+                  content.style.maxHeight = content.scrollHeight + "px";
                   //df_header.style.marginTop = content.scrollHeight + 45 + "px";
-                  //df.style.marginTop = content.scrollHeight + 96 + "px";
-
-                  console.log("parseInt(content_style['maxHeight'].replace('px','')) OPEN", content_style['maxHeight'].replace('px',''));
-                 // df.style.marginTop = last_open_height + 45 + "px";
-                   content.style.maxHeight = content.scrollHeight + "px";
+                  df.style.marginTop = content.scrollHeight + 96 + "px";
                 } 
               });
             }
@@ -442,9 +432,7 @@
             function myFunction() {
               var input, filter, table, tr, td, i, txtValue;
 
-            var df = document.getElementById("myTable");
               var entries = document.getElementsByClassName("entry");
-              var content = document.getElementsByClassName("content")[0];
               input = document.getElementById("myInput");
               input1 = document.getElementById("myInput1");
               input2 = document.getElementById("myInput2");
@@ -466,15 +454,9 @@
                   dateValue = date.textContent || date.innerText;
             
                     var index = txtHTML.toUpperCase().indexOf(filter);
-                    var content_style = window.getComputedStyle(content);
-                    //console.log('content_style_height: ',content_style['height'].replace('px',''))
-                    //console.log('content_style_scrollHeight: ',content_style['maxHeight'])
-                    if (content_style['height'].replace('px','') != '0'){
-                    df.style.marginTop = parseInt(content_style['height'].replace('px','')) + 45 + "px";
-                 }
-                   // console.log('index: ',index)
+                    console.log('index: ',index)
                     
-                   // console.log('txtHTML: ', txtHTML)
+                    console.log('txtHTML: ', txtHTML)
             
                 if (filter.length > 0)
               {
@@ -485,9 +467,9 @@
               {td.innerHTML = oldtextHTML;}
                   
                 if (txtValue.toUpperCase().indexOf(filter) > -1 && titleValue.toUpperCase().indexOf(filter2) > -1  && dateValue.toUpperCase().indexOf(filter1) > -1)  {
-               // console.log('txtValue: ', txtValue)
-                //console.log('titleValue: ', titleValue)
-                //console.log('input.value.toUpperCase(): ', input.value.toUpperCase())
+                console.log('txtValue: ', txtValue)
+                console.log('titleValue: ', titleValue)
+                console.log('input.value.toUpperCase(): ', input.value.toUpperCase())
             
               // if (input.value.toUpperCase().indexOf(txtValue.toUpperCase()) > -1 ) {
             

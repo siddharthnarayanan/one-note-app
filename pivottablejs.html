@@ -61,7 +61,874 @@
              });
         </script>
         <div id="output" style="display: none;">,date,  , ,   
-0,2020-02-18,relativity,"
+0,2020-02-20,ESG,"
+PARAbole
+
+Currently uses DOW Jones API
+Contexts within Social, Environment and Governance
+News activity is captured using frequency and strength -- not Sentiment analysis 
+Disclosures are more important than news
+Product mapping -> demo had industry mapping due to some data sharing constraints
+
+Unsupervised learning model
+Generates corpus -- standard agnostic SBAS, GCI 
+Trains on narratives, new custom one can be readily trained
+Pre-trained on 75k documents
+Each step is validated at checkpoints 
+training is reviewed  manually using a random sample
+OCR is ABBYY for scanning. Disclosures are searchable pdf's to directly converted to text
+Text is broken into paragraphs using their custom script
+
+UI is simple, actual use as platform
+Multiple use cases - LIBOR, tables
+Nested tables - they have codebase
+Highlights text within document 
+PII - classifier -- primary context, secondary context 
+
+Azure, Kubernetes
+Readily scalable
+On-prem, integratable with AWS
+Integrated with SharePoint 
+
+Approach 
+Wrap their baseline models into our solution
+Augment models if required and business rules, post-processing layer
+
+
+
+","
+parabole
+
+currently uses dow jones api
+contexts within social, environment and governance
+news activity is captured using frequency and strength -- not sentiment analysis 
+disclosures are more important than news
+product mapping -> demo had industry mapping due to some data sharing constraints
+
+unsupervised learning model
+generates corpus -- standard agnostic sbas, gci 
+trains on narratives, new custom one can be readily trained
+pre-trained on 75k documents
+each step is validated at checkpoints 
+training is reviewed  manually using a random sample
+ocr is abbyy for scanning. disclosures are searchable pdf's to directly converted to text
+text is broken into paragraphs using their custom script
+
+ui is simple, actual use as platform
+multiple use cases - libor, tables
+nested tables - they have codebase
+highlights text within document 
+pii - classifier -- primary context, secondary context 
+
+azure, kubernetes
+readily scalable
+on-prem, integratable with aws
+integrated with sharepoint 
+
+approach 
+wrap their baseline models into our solution
+augment models if required and business rules, post-processing layer
+
+
+
+"
+1,2020-02-21,server,"
+Only my profile on the server has packages + sample code that runs
+
+WF recommends -> uninstall packages
+
+
+","
+only my profile on the server has packages + sample code that runs
+
+wf recommends -> uninstall packages
+
+
+"
+2,2020-02-20,KIRA,"
+
+API and technical: 
+KIRA 
+
+End to end upload API
+Document intelligence
+
+Specific locations, metadata
+Metadata integration
+
+Review 
+Export options summary excel files
+Pdf exports
+
+Look at API's calls 
+ID's, numerical files
+
+What
+
+Batching, 
+
+How will you configure schedule jobs 
+
+AES 26 encryption data 
+
+
+
+Meet Ran and Jan about next steps POC evaluation meeting
+Check with other users about access
+Evaluation criteria sheet
+","
+
+api and technical: 
+kira 
+
+end to end upload api
+document intelligence
+
+specific locations, metadata
+metadata integration
+
+review 
+export options summary excel files
+pdf exports
+
+look at api's calls 
+id's, numerical files
+
+what
+
+batching, 
+
+how will you configure schedule jobs 
+
+aes 26 encryption data 
+
+
+
+meet ran and jan about next steps poc evaluation meeting
+check with other users about access
+evaluation criteria sheet
+"
+3,2020-02-20,KIRA,"
+EY:
+Teams have created accounts 
+Evaluation criteria review undergoing
+Sharing with Madrid team, swiss forensics
+
+API &technical: 
+KIRA has API documentation + resources
+Where it fits in end to end
+To check if we can customize, depends on what POC needs
+Comparison with other vendors (e.g. SEAL)
+
+Next steps:
+Coordination with EMEA team + business team
+To decide scope:
+Use cases
+Types of contracts document types
+LIBOR
+Contracts seem to be good
+
+CCPA
+Capabilities:
+Fields by document type, different fields by doc hierarchy as well ? Agreement vs note vs amendment L1, L2, L3
+
+Comparison with other vendors (e.g. SEAL)
+
+Deployment option --- affecting capabilities required
+Dev instance, prod instance setup
+
+","
+ey:
+teams have created accounts 
+evaluation criteria review undergoing
+sharing with madrid team, swiss forensics
+
+api &technical: 
+kira has api documentation + resources
+where it fits in end to end
+to check if we can customize, depends on what poc needs
+comparison with other vendors (e.g. seal)
+
+next steps:
+coordination with emea team + business team
+to decide scope:
+use cases
+types of contracts document types
+libor
+contracts seem to be good
+
+ccpa
+capabilities:
+fields by document type, different fields by doc hierarchy as well ? agreement vs note vs amendment l1, l2, l3
+
+comparison with other vendors (e.g. seal)
+
+deployment option --- affecting capabilities required
+dev instance, prod instance setup
+
+"
+4,2020-02-20,KIRA,"
+Business case TODO
+
+Co-Develop use case
+
+Scenario
+Seal
+Kira
+
+Use cases for collaboration
+SEAL: currently LIBOR
+KIRA: contract heavy documents
+
+KIRA 
+does not have outer post-processing layer and rules engine
+
+Rules engine:
+Steps Yousef: IBM rules engine
+
+Build solution on top of what we have
+
+License base models + create out IP on top
+
+
+End tp end
+Customoize
+
+ESG meeting
+
+Global vs legal entity collaboration
+
+Consideration
+
+
+Onboarding on client side with take long if needed
+
+Jonathan inputs:
+KIRA
+Is there
+OCR -> vendor
+
+Model questions -> 
+Neural networks
+
+Lease documents
+Data sets to train
+
+Comparison between
+Dicr vs adam vs kira
+Adam-> rules based
+Inference time -> DICR takes very long
+OCR -> takes very long -> ateast a 100 pages
+
+
+
+
+","
+business case <h5>todo</h5>
+
+co-develop use case
+
+scenario
+seal
+kira
+
+use cases for collaboration
+seal: currently libor
+kira: contract heavy documents
+
+kira 
+does not have outer post-processing layer and rules engine
+
+rules engine:
+steps yousef: ibm rules engine
+
+build solution on top of what we have
+
+license base models + create out ip on top
+
+
+end tp end
+customoize
+
+esg meeting
+
+global vs legal entity collaboration
+
+consideration
+
+
+onboarding on client side with take long if needed
+
+jonathan inputs:
+kira
+is there
+ocr -> vendor
+
+model questions -> 
+neural networks
+
+lease documents
+data sets to train
+
+comparison between
+dicr vs adam vs kira
+adam-> rules based
+inference time -> dicr takes very long
+ocr -> takes very long -> ateast a 100 pages
+
+
+
+
+"
+5,2020-02-21,Relativity server,"
+EDF team 
+GJ
+
+
+","
+edf team 
+gj
+
+
+"
+6,2020-02-19,relativity,"
+Follow up from previous meeting:
+Dedupe -> within SEAL 
+Xml to txt
+Rashmi will follow up -- 
+SQL DB <-> python on WF
+
+Match CS001, CS001 as same groupID by defult -> assumption*
+Or should we keep it as noe
+Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
+
+
+Answered -- *
+
+How is review being done ? 
+Look at other docs ?
+
+Business has to tell which level to roll up on 
+
+Text format export- relativity
+
+Final solution on single doc - multiple records
+Lester rashmi talk
+","
+follow up from previous meeting:
+dedupe -> within seal 
+xml to txt
+rashmi will follow up -- 
+sql db <-> python on wf
+
+match cs001, cs001 as same groupid by defult -> assumption*
+or should we keep it as noe
+or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
+
+
+answered -- *
+
+how is review being done ? 
+look at other docs ?
+
+business has to tell which level to roll up on 
+
+text format export- relativity
+
+final solution on single doc - multiple records
+lester rashmi talk
+"
+7,2020-02-19,relativity,"
+
+","
+
+"
+8,2020-02-20,server,"
+application server account
+
+sql server local account
+
+
+Add users to ECMD_admin AD group with DB
+
+
+
+Add users to this group
+no humans in service account
+Create domain account with read privileges TODO
+
+Art request - separate local sql account for accelerator - read/write/update  TODO
+
+Art request to add groups to AD
+
+
+
+
+
+","
+application server account
+
+sql server local account
+
+
+add users to ecmd_admin ad group with db
+
+
+
+add users to this group
+no humans in service account
+create domain account with read privileges <h5>todo</h5>
+
+art request - separate local sql account for accelerator - read/write/update  <h5>todo</h5>
+
+art request to add groups to ad
+
+
+
+
+
+"
+9,2020-02-20,server,"
+
+","
+
+"
+10,2020-02-20,DFA story,"
+P1 – approach overview:
+
+Brief description and objective  (e.g. run 20 documents through SEAL vs. Ground truth etc. – can borrow from the daily status email)
+Input – also attached our input files: 
+
+Doc samples
+Input terms : ICMP Vs. SEAL
+Doc Hierarchy Matrix
+
+
+Four use cases framework
+Output – attach the two output files --- After all the discussed changes are determined
+
+Doc Family output (contract set ID, Group ID, completeness check etc.) Vs. indication for Relativity
+
+
+
+ 
+P2 – Results Analysis (comparison of current Vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, ICMP data – the one CJ discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
+P3 – Areas of improvement & next steps and prioritization items (corresponding to painpoints)
+","
+p1 – approach overview:
+
+brief description and objective  (e.g. run 20 documents through seal vs. ground truth etc. – can borrow from the daily status email)
+input – also attached our input files: 
+
+doc samples
+input terms : icmp vs. seal
+doc hierarchy matrix
+
+
+four use cases framework
+output – attach the two output files --- after all the discussed changes are determined
+
+doc family output (contract set id, group id, completeness check etc.) vs. indication for relativity
+
+
+
+ 
+p2 – results analysis (comparison of current vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, icmp data – the one cj discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
+p3 – areas of improvement & next steps and prioritization items (corresponding to painpoints)
+"
+11,2020-02-19,Storyline,"
+Findings
+
+Assessment
+
+ICMP, seal data is not good
+
+% change
+Improvement of accuracy from baseline to ideal
+
+How many teams are matched on
+","
+findings
+
+assessment
+
+icmp, seal data is not good
+
+% change
+improvement of accuracy from baseline to ideal
+
+how many teams are matched on
+"
+12,2020-02-19,Storyline,"
+Overall threshold
+
+Date + principal + LE
+
+Give you more false postivei
+ not linked by family but date
+Even if 1 match -> easier for review
+","
+overall threshold
+
+date + principal + le
+
+give you more false postivei
+ not linked by family but date
+even if 1 match -> easier for review
+"
+13,2020-02-19,Storyline,"
+Business input :
+Create hierarchy matrix for document types for RC, SBU -> L1,L2,L3
+terms to match on + confidence for RC, SBU -> order of importance and weight
+
+UID's for each SBU
+Flag in accelerator to set if we should use UID -> determine the level at which level loan/account
+
+Columns align with relativity workflow for linkage
+Proposed -> Validated columns for review process
+P/C flags for parent/child ID
+GroupID -> AccountLevel, ContractSetID -> Loan Level
+
+Current SEAL assessment and  & pre-processing 
+
+We tested on 20 docs from SEAL dev + Linda ICMP
+
+Date Normalization: Current SEAL answer field has no output and interim field has unnormalized dates as well. 
+LE: SEAL captures parties in intermediate field 
+Principal: Commitment identified. Accelerator expects normalized value
+Address: TODO
+
+From current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
+
+Match on LE -> some will match
+Match on date & principal 
+
+Subset of these will match to give most coverage
+
+1 doc -> multiple accounts based on legal entities
+
+4 use cases:
+   From sample set used for testing. CRE had metadata for case-1 and consumer did not
+   Accuracy of accelerator will improve with expected input for Seal and Metadata -> with agreement-name fuzzy, + normalized date + normalized principal
+
+Account roll up matches on LE between contract sets -> current exact matches only -> need fuzzy TODO
+    during batching, an incomplete contract set (CS_002) is sent back in again with new (CS__00N) but (CS_002) is now gone/trashed, will not be used again
+
+ParentChildID works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
+
+Next steps:
+Incorporate terms matching + confidence score TODO
+Address matching TODO
+
+
+","
+business input :
+create hierarchy matrix for document types for rc, sbu -> l1,l2,l3
+terms to match on + confidence for rc, sbu -> order of importance and weight
+
+uid's for each sbu
+flag in accelerator to set if we should use uid -> determine the level at which level loan/account
+
+columns align with relativity workflow for linkage
+proposed -> validated columns for review process
+p/c flags for parent/child id
+groupid -> accountlevel, contractsetid -> loan level
+
+current seal assessment and  & pre-processing 
+
+we tested on 20 docs from seal dev + linda icmp
+
+date normalization: current seal answer field has no output and interim field has unnormalized dates as well. 
+le: seal captures parties in intermediate field 
+principal: commitment identified. accelerator expects normalized value
+address: <h5>todo</h5>
+
+from current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
+
+match on le -> some will match
+match on date & principal 
+
+subset of these will match to give most coverage
+
+1 doc -> multiple accounts based on legal entities
+
+4 use cases:
+   from sample set used for testing. cre had metadata for case-1 and consumer did not
+   accuracy of accelerator will improve with expected input for seal and metadata -> with agreement-name fuzzy, + normalized date + normalized principal
+
+account roll up matches on le between contract sets -> current exact matches only -> need fuzzy <h5>todo</h5>
+    during batching, an incomplete contract set (cs_002) is sent back in again with new (cs__00n) but (cs_002) is now gone/trashed, will not be used again
+
+parentchildid works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
+
+next steps:
+incorporate terms matching + confidence score <h5>todo</h5>
+address matching <h5>todo</h5>
+
+
+"
+14,2020-02-06,KIRA,"
+asynchronous  API calls
+
+How to embed charts into workspace
+
+Modular, where parts can be leveraged
+
+How long to set up POC
+Prod ready
+
+
+
+","
+asynchronous  api calls
+
+how to embed charts into workspace
+
+modular, where parts can be leveraged
+
+how long to set up poc
+prod ready
+
+
+
+"
+15,2020-02-06,KIRA,"
+KIRA 
+
+End to end upload API
+Document intelligence
+
+Specific locations, metadata
+Metadata integration
+
+Review 
+Export options summary excel files
+Pdf exports
+
+Look at API's calls 
+ID's, numerical files
+
+What
+
+Batching, 
+
+How will you configure schedule jobs 
+
+AES 26 encryption data 
+
+
+
+Meet Ran and Jan about next steps POC evaluation meeting
+Check with other users about access
+Evaluation criteria sheet
+","
+kira 
+
+end to end upload api
+document intelligence
+
+specific locations, metadata
+metadata integration
+
+review 
+export options summary excel files
+pdf exports
+
+look at api's calls 
+id's, numerical files
+
+what
+
+batching, 
+
+how will you configure schedule jobs 
+
+aes 26 encryption data 
+
+
+
+meet ran and jan about next steps poc evaluation meeting
+check with other users about access
+evaluation criteria sheet
+"
+16,2020-02-19,Accelerator,"
+Create sample static file for terms to match and confidence score
+
+Test this on accelerator script
+
+TODO
+
+
+","
+create sample static file for terms to match and confidence score
+
+test this on accelerator script
+
+<h5>todo</h5>
+
+
+"
+17,2020-02-19,Business questions,"
+CJ questions
+
+Is L1 optional for some types ?
+
+Cases where L2->L3 is the only one where they translate to L1->L2
+","
+cj questions
+
+is l1 optional for some types ?
+
+cases where l2->l3 is the only one where they translate to l1->l2
+"
+18,2020-02-19,Business questions,"
+UID for loan level or none -- confirm
+
+Double match -- flag this in accelerator TODO
+
+
+
+
+","
+uid for loan level or none -- confirm
+
+double match -- flag this in accelerator <h5>todo</h5>
+
+
+
+
+"
+19,2020-02-19,Business questions,"
+V1 within doc ID 
+How to strip ContractID from text
+
+
+Exact match
+
+CRE + consumer +CMS -> Loan number is contractID
+
+
+
+
+","
+v1 within doc id 
+how to strip contractid from text
+
+
+exact match
+
+cre + consumer +cms -> loan number is contractid
+
+
+
+
+"
+20,2020-02-19,WIM,"
+No fields currently answer
+Dates are detected
+Not agreement name
+
+Addresses are not captured
+
+Show them contracts
+Walk them through fields you're looking for
+
+
+
+
+","
+no fields currently answer
+dates are detected
+not agreement name
+
+addresses are not captured
+
+show them contracts
+walk them through fields you're looking for
+
+
+
+
+"
+21,2020-02-19,Relativity questions,"
+Match by LE mark differently
+
+Match CS001, CS001 as same groupID by defult -> assumption
+Or should we keep it as noe
+Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
+
+How is review being done ?
+Look at other docs ?
+","
+match by le mark differently
+
+match cs001, cs001 as same groupid by defult -> assumption
+or should we keep it as noe
+or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
+
+how is review being done ?
+look at other docs ?
+"
+22,2020-02-19,Relativity questions,"
+
+","
+
+"
+23,2020-02-19,SEAL WIM,"
+Clearing linkage
+
+Fields:
+Date (of clearing agreement)
+Broker Name 
+Clearing Firm Name
+Broker Address
+Clearing Firm Address
+Date (of Amendment & Schedule A)
+Maturity Date
+
+Agreement
+No agreement name -> captured in contractType
+LE: captured, contract mentions roles but not SEAL
+Start date: captured
+Address: broker and first clearing address mentioned separately in doc
+
+
+Schedule A
+No agreement name
+Start date: captured
+Maturity Date: multiple captured correct
+LE: captured: need to see who is broker and who is clearing firm
+","
+clearing linkage
+
+fields:
+date (of clearing agreement)
+broker name 
+clearing firm name
+broker address
+clearing firm address
+date (of amendment & schedule a)
+maturity date
+
+agreement
+no agreement name -> captured in contracttype
+le: captured, contract mentions roles but not seal
+start date: captured
+address: broker and first clearing address mentioned separately in doc
+
+
+schedule a
+no agreement name
+start date: captured
+maturity date: multiple captured correct
+le: captured: need to see who is broker and who is clearing firm
+"
+24,2020-02-19,Address -> enhancements,"
+Address -> enhancements
+","
+address -> enhancements
+"
+25,2020-02-18,relativity,"
 Fields <-> relativity database
 
 SEAL
@@ -88,19 +955,494 @@ dedupe scripts
 
 where dedupe
 where the txt xml script sit ?
-<h5 class='red-color'>todo</h5> accelerator to get back
+<h5>todo</h5> accelerator to get back
 
 
 rc, sbu to be added relativity
-<h5 class='red-color'>todo</h5> accelerator share
-<h5 class='red-color'>todo</h5> excel share static files xls
+<h5>todo</h5> accelerator share
+<h5>todo</h5> excel share static files xls
 
 load static files into custom objects/ table
 
 
 
 "
-1,2020-02-17,Tasks,"
+26,2020-02-20,ESG,"
+PARAbole
+
+Currently uses DOW Jones API
+Contexts within Social, Environment and Governance
+News activity is captured using frequency and strength -- not Sentiment analysis 
+Disclosures are more important than news
+Product mapping -> demo had industry mapping due to some data sharing constraints
+
+Unsupervised learning model
+Generates corpus -- standard agnostic SBAS, GCI 
+Trains on narratives, new custom one can be readily trained
+Pre-trained on 75k documents
+Each step is validated at checkpoints 
+training is reviewed  manually using a random sample
+OCR is ABBYY for scanning. Disclosures are searchable pdf's to directly converted to text
+Text is broken into paragraphs using their custom script
+
+UI is simple, actual use as platform
+Multiple use cases - LIBOR, tables
+Nested tables - they have codebase
+Highlights text within document 
+PII - classifier -- primary context, secondary context 
+
+Azure, Kubernetes
+Readily scalable
+On-prem, integratable with AWS
+Integrated with SharePoint 
+
+Approach 
+Wrap their baseline models into our solution
+Augment models if required and business rules, post-processing layer
+
+
+
+","
+parabole
+
+currently uses dow jones api
+contexts within social, environment and governance
+news activity is captured using frequency and strength -- not sentiment analysis 
+disclosures are more important than news
+product mapping -> demo had industry mapping due to some data sharing constraints
+
+unsupervised learning model
+generates corpus -- standard agnostic sbas, gci 
+trains on narratives, new custom one can be readily trained
+pre-trained on 75k documents
+each step is validated at checkpoints 
+training is reviewed  manually using a random sample
+ocr is abbyy for scanning. disclosures are searchable pdf's to directly converted to text
+text is broken into paragraphs using their custom script
+
+ui is simple, actual use as platform
+multiple use cases - libor, tables
+nested tables - they have codebase
+highlights text within document 
+pii - classifier -- primary context, secondary context 
+
+azure, kubernetes
+readily scalable
+on-prem, integratable with aws
+integrated with sharepoint 
+
+approach 
+wrap their baseline models into our solution
+augment models if required and business rules, post-processing layer
+
+
+
+"
+27,2020-02-21,server,"
+Only my profile on the server has packages + sample code that runs
+
+WF recommends -> uninstall packages
+
+
+","
+only my profile on the server has packages + sample code that runs
+
+wf recommends -> uninstall packages
+
+
+"
+28,2020-02-20,KIRA,"
+
+API and technical: 
+KIRA 
+
+End to end upload API
+Document intelligence
+
+Specific locations, metadata
+Metadata integration
+
+Review 
+Export options summary excel files
+Pdf exports
+
+Look at API's calls 
+ID's, numerical files
+
+What
+
+Batching, 
+
+How will you configure schedule jobs 
+
+AES 26 encryption data 
+
+
+
+Meet Ran and Jan about next steps POC evaluation meeting
+Check with other users about access
+Evaluation criteria sheet
+","
+
+api and technical: 
+kira 
+
+end to end upload api
+document intelligence
+
+specific locations, metadata
+metadata integration
+
+review 
+export options summary excel files
+pdf exports
+
+look at api's calls 
+id's, numerical files
+
+what
+
+batching, 
+
+how will you configure schedule jobs 
+
+aes 26 encryption data 
+
+
+
+meet ran and jan about next steps poc evaluation meeting
+check with other users about access
+evaluation criteria sheet
+"
+29,2020-02-20,KIRA,"
+EY:
+Teams have created accounts 
+Evaluation criteria review undergoing
+Sharing with Madrid team, swiss forensics
+
+API &technical: 
+KIRA has API documentation + resources
+Where it fits in end to end
+To check if we can customize, depends on what POC needs
+Comparison with other vendors (e.g. SEAL)
+
+Next steps:
+Coordination with EMEA team + business team
+To decide scope:
+Use cases
+Types of contracts document types
+LIBOR
+Contracts seem to be good
+
+CCPA
+Capabilities:
+Fields by document type, different fields by doc hierarchy as well ? Agreement vs note vs amendment L1, L2, L3
+
+Comparison with other vendors (e.g. SEAL)
+
+Deployment option --- affecting capabilities required
+Dev instance, prod instance setup
+
+","
+ey:
+teams have created accounts 
+evaluation criteria review undergoing
+sharing with madrid team, swiss forensics
+
+api &technical: 
+kira has api documentation + resources
+where it fits in end to end
+to check if we can customize, depends on what poc needs
+comparison with other vendors (e.g. seal)
+
+next steps:
+coordination with emea team + business team
+to decide scope:
+use cases
+types of contracts document types
+libor
+contracts seem to be good
+
+ccpa
+capabilities:
+fields by document type, different fields by doc hierarchy as well ? agreement vs note vs amendment l1, l2, l3
+
+comparison with other vendors (e.g. seal)
+
+deployment option --- affecting capabilities required
+dev instance, prod instance setup
+
+"
+30,2020-02-20,KIRA,"
+Business case TODO
+
+Co-Develop use case
+
+Scenario
+Seal
+Kira
+
+Use cases for collaboration
+SEAL: currently LIBOR
+KIRA: contract heavy documents
+
+KIRA 
+does not have outer post-processing layer and rules engine
+
+Rules engine:
+Steps Yousef: IBM rules engine
+
+Build solution on top of what we have
+
+License base models + create out IP on top
+
+
+End tp end
+Customoize
+
+ESG meeting
+
+Global vs legal entity collaboration
+
+Consideration
+
+
+Onboarding on client side with take long if needed
+
+Jonathan inputs:
+KIRA
+Is there
+OCR -> vendor
+
+Model questions -> 
+Neural networks
+
+Lease documents
+Data sets to train
+
+Comparison between
+Dicr vs adam vs kira
+Adam-> rules based
+Inference time -> DICR takes very long
+OCR -> takes very long -> ateast a 100 pages
+
+
+
+
+","
+business case <h5>todo</h5>
+
+co-develop use case
+
+scenario
+seal
+kira
+
+use cases for collaboration
+seal: currently libor
+kira: contract heavy documents
+
+kira 
+does not have outer post-processing layer and rules engine
+
+rules engine:
+steps yousef: ibm rules engine
+
+build solution on top of what we have
+
+license base models + create out ip on top
+
+
+end tp end
+customoize
+
+esg meeting
+
+global vs legal entity collaboration
+
+consideration
+
+
+onboarding on client side with take long if needed
+
+jonathan inputs:
+kira
+is there
+ocr -> vendor
+
+model questions -> 
+neural networks
+
+lease documents
+data sets to train
+
+comparison between
+dicr vs adam vs kira
+adam-> rules based
+inference time -> dicr takes very long
+ocr -> takes very long -> ateast a 100 pages
+
+
+
+
+"
+31,2020-02-21,Relativity server,"
+EDF team 
+GJ
+
+
+","
+edf team 
+gj
+
+
+"
+32,2020-02-19,relativity,"
+Follow up from previous meeting:
+Dedupe -> within SEAL 
+Xml to txt
+Rashmi will follow up -- 
+SQL DB <-> python on WF
+
+Match CS001, CS001 as same groupID by defult -> assumption*
+Or should we keep it as noe
+Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
+
+
+Answered -- *
+
+How is review being done ? 
+Look at other docs ?
+
+Business has to tell which level to roll up on 
+
+Text format export- relativity
+
+Final solution on single doc - multiple records
+Lester rashmi talk
+","
+follow up from previous meeting:
+dedupe -> within seal 
+xml to txt
+rashmi will follow up -- 
+sql db <-> python on wf
+
+match cs001, cs001 as same groupid by defult -> assumption*
+or should we keep it as noe
+or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
+
+
+answered -- *
+
+how is review being done ? 
+look at other docs ?
+
+business has to tell which level to roll up on 
+
+text format export- relativity
+
+final solution on single doc - multiple records
+lester rashmi talk
+"
+33,2020-02-19,relativity,"
+
+","
+
+"
+34,2020-02-20,server,"
+application server account
+
+sql server local account
+
+
+Add users to ECMD_admin AD group with DB
+
+
+
+Add users to this group
+no humans in service account
+Create domain account with read privileges TODO
+
+Art request - separate local sql account for accelerator - read/write/update  TODO
+
+Art request to add groups to AD
+
+
+
+
+
+","
+application server account
+
+sql server local account
+
+
+add users to ecmd_admin ad group with db
+
+
+
+add users to this group
+no humans in service account
+create domain account with read privileges <h5>todo</h5>
+
+art request - separate local sql account for accelerator - read/write/update  <h5>todo</h5>
+
+art request to add groups to ad
+
+
+
+
+
+"
+35,2020-02-20,server,"
+
+","
+
+"
+36,2020-02-20,DFA story,"
+P1 – approach overview:
+
+Brief description and objective  (e.g. run 20 documents through SEAL vs. Ground truth etc. – can borrow from the daily status email)
+Input – also attached our input files: 
+
+Doc samples
+Input terms : ICMP Vs. SEAL
+Doc Hierarchy Matrix
+
+
+Four use cases framework
+Output – attach the two output files --- After all the discussed changes are determined
+
+Doc Family output (contract set ID, Group ID, completeness check etc.) Vs. indication for Relativity
+
+
+
+ 
+P2 – Results Analysis (comparison of current Vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, ICMP data – the one CJ discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
+P3 – Areas of improvement & next steps and prioritization items (corresponding to painpoints)
+","
+p1 – approach overview:
+
+brief description and objective  (e.g. run 20 documents through seal vs. ground truth etc. – can borrow from the daily status email)
+input – also attached our input files: 
+
+doc samples
+input terms : icmp vs. seal
+doc hierarchy matrix
+
+
+four use cases framework
+output – attach the two output files --- after all the discussed changes are determined
+
+doc family output (contract set id, group id, completeness check etc.) vs. indication for relativity
+
+
+
+ 
+p2 – results analysis (comparison of current vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, icmp data – the one cj discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
+p3 – areas of improvement & next steps and prioritization items (corresponding to painpoints)
+"
+37,2020-02-19,Storyline,"
 Findings
 
 Assessment
@@ -123,43 +1465,7 @@ improvement of accuracy from baseline to ideal
 
 how many teams are matched on
 "
-2,2020-02-17,Tasks,"
-We know input
-
-Which table
-
-Metadata
-
-RC, LOB  Relativity TODO
-Coming from metadata
-Connect on data dictionary
-ICMP_RC, ICMP_SBU
-
-How do I get the file off the server
-
-
-","
-we know input
-
-which table
-
-metadata
-
-rc, lob  relativity <h5 class='red-color'>todo</h5>
-coming from metadata
-connect on data dictionary
-icmp_rc, icmp_sbu
-
-how do i get the file off the server
-
-
-"
-3,2020-02-17,Tasks,"
-Check terms for WIM in SEAL
-","
-check terms for wim in seal
-"
-4,2020-02-17,Tasks,"
+38,2020-02-19,Storyline,"
 Overall threshold
 
 Date + principal + LE
@@ -176,1304 +1482,396 @@ give you more false postivei
  not linked by family but date
 even if 1 match -> easier for review
 "
-5,2020-02-17,Tasks,"
-14.15
-","
-14.15
-"
-6,2020-02-14,CCID demo,"
-Git process
+39,2020-02-19,Storyline,"
+Business input :
+Create hierarchy matrix for document types for RC, SBU -> L1,L2,L3
+terms to match on + confidence for RC, SBU -> order of importance and weight
 
-Dev v1 branch
+UID's for each SBU
+Flag in accelerator to set if we should use UID -> determine the level at which level loan/account
 
-Dev has to create branch
-Commits own branch
+Columns align with relativity workflow for linkage
+Proposed -> Validated columns for review process
+P/C flags for parent/child ID
+GroupID -> AccountLevel, ContractSetID -> Loan Level
 
-Then dev branch
+Current SEAL assessment and  & pre-processing 
 
-Lead dev -> review , approve, commit reject 
-Send back to devs
+We tested on 20 docs from SEAL dev + Linda ICMP
 
-Back to dev branch
+Date Normalization: Current SEAL answer field has no output and interim field has unnormalized dates as well. 
+LE: SEAL captures parties in intermediate field 
+Principal: Commitment identified. Accelerator expects normalized value
+Address: TODO
 
-Merge to dev branch
+From current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
 
+Match on LE -> some will match
+Match on date & principal 
 
-Pull request and push to release branch 
-Jenkins -> map release branch
+Subset of these will match to give most coverage
 
-Prod code means 
-Prod teams approve -> merge to master
+1 doc -> multiple accounts based on legal entities
 
-Simultaneous release 
-Create release branch v1 -> v2
-Back door -> lead dev + devs
-Hotfix, 
-Prod fix 
+4 use cases:
+   From sample set used for testing. CRE had metadata for case-1 and consumer did not
+   Accuracy of accelerator will improve with expected input for Seal and Metadata -> with agreement-name fuzzy, + normalized date + normalized principal
 
+Account roll up matches on LE between contract sets -> current exact matches only -> need fuzzy TODO
+    during batching, an incomplete contract set (CS_002) is sent back in again with new (CS__00N) but (CS_002) is now gone/trashed, will not be used again
 
- 
-","
-git process
+ParentChildID works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
 
-dev v1 branch
-
-dev has to create branch
-commits own branch
-
-then dev branch
-
-lead dev -> review , approve, commit reject 
-send back to devs
-
-back to dev branch
-
-merge to dev branch
-
-
-pull request and push to release branch 
-jenkins -> map release branch
-
-prod code means 
-prod teams approve -> merge to master
-
-simultaneous release 
-create release branch v1 -> v2
-back door -> lead dev + devs
-hotfix, 
-prod fix 
-
-
- 
-"
-7,2020-02-14,CCID demo,"
-Dev branch
-Pull request
-Provide commit
-Pulls 
-
-Dev, release and master
-Maintain code
+Next steps:
+Incorporate terms matching + confidence score TODO
+Address matching TODO
 
 
 ","
-dev branch
-pull request
-provide commit
-pulls 
+business input :
+create hierarchy matrix for document types for rc, sbu -> l1,l2,l3
+terms to match on + confidence for rc, sbu -> order of importance and weight
 
-dev, release and master
-maintain code
+uid's for each sbu
+flag in accelerator to set if we should use uid -> determine the level at which level loan/account
 
+columns align with relativity workflow for linkage
+proposed -> validated columns for review process
+p/c flags for parent/child id
+groupid -> accountlevel, contractsetid -> loan level
 
-"
-8,2020-02-14,CCID demo,"
-Vscode
+current seal assessment and  & pre-processing 
 
-Mscovercoverage
-Sonar 
-Plugin for IDE
-SLA for each CR
-Push any code for prod 
-Must have CR
-Must have to go thorugh approvers and different steams
-Then go to final CR approval
-Pac2000 
-Code qualty
+we tested on 20 docs from seal dev + linda icmp
 
-Budild definitionas
+date normalization: current seal answer field has no output and interim field has unnormalized dates as well. 
+le: seal captures parties in intermediate field 
+principal: commitment identified. accelerator expects normalized value
+address: <h5>todo</h5>
 
-Udpeploy relsease
+from current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
 
-Application seciruty
+match on le -> some will match
+match on date & principal 
 
-Logs
+subset of these will match to give most coverage
 
+1 doc -> multiple accounts based on legal entities
 
-Health and performance
-Splunk app dynamics
+4 use cases:
+   from sample set used for testing. cre had metadata for case-1 and consumer did not
+   accuracy of accelerator will improve with expected input for seal and metadata -> with agreement-name fuzzy, + normalized date + normalized principal
 
+account roll up matches on le between contract sets -> current exact matches only -> need fuzzy <h5>todo</h5>
+    during batching, an incomplete contract set (cs_002) is sent back in again with new (cs__00n) but (cs_002) is now gone/trashed, will not be used again
 
-Get info from server tgams nans intall on servers 
-TODO gary & mansih
+parentchildid works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
 
-
-","
-vscode
-
-mscovercoverage
-sonar 
-plugin for ide
-sla for each cr
-push any code for prod 
-must have cr
-must have to go thorugh approvers and different steams
-then go to final cr approval
-pac2000 
-code qualty
-
-budild definitionas
-
-udpeploy relsease
-
-application seciruty
-
-logs
-
-
-health and performance
-splunk app dynamics
-
-
-get info from server tgams nans intall on servers 
-<h5 class='red-color'>todo</h5> gary & mansih
+next steps:
+incorporate terms matching + confidence score <h5>todo</h5>
+address matching <h5>todo</h5>
 
 
 "
-9,2020-02-14,CCID demo,"
-Jira tickets 
-Otherwise you can't check in code
-","
-jira tickets 
-otherwise you can't check in code
-"
-10,2020-02-14,CCID demo,"
+40,2020-02-06,KIRA,"
+asynchronous  API calls
 
-","
+How to embed charts into workspace
 
-"
-11,2020-02-13,relativity,"
-UI for hierarchy matrix 
+Modular, where parts can be leveraged
 
-Lester - Ran
-Accelerator server<-> DB in WF
-
-Challenges MVP0
-Setup
-Install 
-
-DB -> SLHS
-GJ .NET/C# not needed at the moment￼
-Linkage approach updates
-","
-ui for hierarchy matrix 
-
-lester - ran
-accelerator server<-> db in wf
-
-challenges mvp0
-setup
-install 
-
-db -> slhs
-gj .net/c# not needed at the moment￼
-linkage approach updates
-"
-12,2020-02-13,relativity,"
-Accelerator server
-Python packages aren't compiled
-
-TODO 
-Send accelerator note
-LLD's are due ~15th
-
-Table UI -> hierarchy matrix + RC, LOB terms to match
-This is for MVP1
-Loading to Custom object should be easy
-Export in SQL -> read into accelerator
-Relativity login will be required -> they need relativity desktop client
-
-Parent/Child ID
- have only P or C flag for each row
-","
-accelerator server
-python packages aren't compiled
-
-<h5 class='red-color'>todo</h5> 
-send accelerator note
-lld's are due ~15th
-
-table ui -> hierarchy matrix + rc, lob terms to match
-this is for mvp1
-loading to custom object should be easy
-export in sql -> read into accelerator
-relativity login will be required -> they need relativity desktop client
-
-parent/child id
- have only p or c flag for each row
-"
-13,2020-02-12,TODO,"
-TODO 
-
-Reach out to Bob about compiling from source ?
-
-
-","
-<h5 class='red-color'>todo</h5> 
-
-reach out to bob about compiling from source ?
-
-
-"
-14,2020-02-12,Fill application,"
-Fill application 
-
-Elma 
-
-Connected to pipeline
-
-Creates new poc branch in repo
-
-Jenkins file
-
-Cd file
-
-Jenkins should also shows 
-
-commonProperties.yml -> config
-Artefactory properties
-
-Sonar -> every build is saved in artefactoy
-
-Sonar -> code quality
-
-uDeploy 
-Configure jobs
-Every 4 hours 
-
-SIT -> UAT
-
-Change process pac2000 for release into prod
-
-WF will start with uDeploy team
-","
-fill application 
-
-elma 
-
-connected to pipeline
-
-creates new poc branch in repo
-
-jenkins file
-
-cd file
-
-jenkins should also shows 
-
-commonproperties.yml -> config
-artefactory properties
-
-sonar -> every build is saved in artefactoy
-
-sonar -> code quality
-
-udeploy 
-configure jobs
-every 4 hours 
-
-sit -> uat
-
-change process pac2000 for release into prod
-
-wf will start with udeploy team
-"
-15,2020-02-12,Measuring quality of code,"
-Protocol for production
-
-Deployment team
-
-Jobs/configure
-
-Compliance
-
-Env control
-
-Life cycle
-
+How long to set up POC
+Prod ready
 
 
 
 ","
-protocol for production
+asynchronous  api calls
 
-deployment team
+how to embed charts into workspace
 
-jobs/configure
+modular, where parts can be leveraged
 
-compliance
-
-env control
-
-life cycle
-
+how long to set up poc
+prod ready
 
 
 
 "
-16,2020-02-12,Measuring quality of code,"
-Measuring quality of code
-Preserve artefacts
+41,2020-02-06,KIRA,"
+KIRA 
+
+End to end upload API
+Document intelligence
+
+Specific locations, metadata
+Metadata integration
+
+Review 
+Export options summary excel files
+Pdf exports
+
+Look at API's calls 
+ID's, numerical files
+
+What
+
+Batching, 
+
+How will you configure schedule jobs 
+
+AES 26 encryption data 
 
 
+
+Meet Ran and Jan about next steps POC evaluation meeting
+Check with other users about access
+Evaluation criteria sheet
 ","
-measuring quality of code
-preserve artefacts
+kira 
+
+end to end upload api
+document intelligence
+
+specific locations, metadata
+metadata integration
+
+review 
+export options summary excel files
+pdf exports
+
+look at api's calls 
+id's, numerical files
+
+what
+
+batching, 
+
+how will you configure schedule jobs 
+
+aes 26 encryption data 
 
 
+
+meet ran and jan about next steps poc evaluation meeting
+check with other users about access
+evaluation criteria sheet
 "
-17,2020-02-12,Measuring quality of code,"
-Deployment pipeline
+42,2020-02-19,Accelerator,"
+Create sample static file for terms to match and confidence score
 
-
-Commit code to github
-Attach code to pipeline for automatics building, testing, artefact
-
-
-","
-deployment pipeline
-
-
-commit code to github
-attach code to pipeline for automatics building, testing, artefact
-
-
-"
-18,2020-02-12,Scrum,"
-SEAL -> data load -> 
-
-MVP0
-Get data from SEAL
-Path to MVP0
-
-
-Narratives for business team 
-Theresa got back on POC workspace
-
-Challenges:
-
-ECMD data store is not going to passing data to SEAL
-No API
-Get data from SEAL -> some processing -> Relativity still being discussed
-Dev env install
-Data loaded
-
-Installing relativity
-
-Process exceptions cleared
-Loading data into dev env -> Gary to weigh in
-
-
-
-
-
-
-Gary's updates ->
-Local admin account created
-RDC
-Python 
-
-We send the list of packages to install
-Continue to develop on EY side and transfer to server and test
-
-
-
-
-
-
-Srikanth time on calendar on time 
-Ports opened etc. 
-
+Test this on accelerator script
 
 TODO
-Siddharth - send list of packages
-Srikanth time on calendar on time 
-Ports opened etc. 
-
-Ran to send note from Lester's mail yesterday on python <-> relativity
-
 
 
 ","
-seal -> data load -> 
+create sample static file for terms to match and confidence score
 
-mvp0
-get data from seal
-path to mvp0
+test this on accelerator script
 
-
-narratives for business team 
-theresa got back on poc workspace
-
-challenges:
-
-ecmd data store is not going to passing data to seal
-no api
-get data from seal -> some processing -> relativity still being discussed
-dev env install
-data loaded
-
-installing relativity
-
-process exceptions cleared
-loading data into dev env -> gary to weigh in
-
-
-
-
-
-
-gary's updates ->
-local admin account created
-rdc
-python 
-
-we send the list of packages to install
-continue to develop on ey side and transfer to server and test
-
-
-
-
-
-
-srikanth time on calendar on time 
-ports opened etc. 
-
-
-<h5 class='red-color'>todo</h5>
-siddharth - send list of packages
-srikanth time on calendar on time 
-ports opened etc. 
-
-ran to send note from lester's mail yesterday on python <-> relativity
-
+<h5>todo</h5>
 
 
 "
-19,2020-02-12,Multiple entities with same transaction,"
-Multiple entities with same transaction
-A + B + C -> agreement
-A + B -> note
-A +C -> amendment
+43,2020-02-19,Business questions,"
+CJ questions
 
-Match on LE and pull => all contracts with same contract set ID  (where LE is blank  --  this part needs to be confirmed. If they are all in 1 family then -> pull all, if they are different pull only where blank)
- 
+Is L1 optional for some types ?
+
+Cases where L2->L3 is the only one where they translate to L1->L2
 ","
-multiple entities with same transaction
-a + b + c -> agreement
-a + b -> note
-a +c -> amendment
+cj questions
 
-match on le and pull => all contracts with same contract set id  (where le is blank  --  this part needs to be confirmed. if they are all in 1 family then -> pull all, if they are different pull only where blank)
- 
+is l1 optional for some types ?
+
+cases where l2->l3 is the only one where they translate to l1->l2
 "
-20,2020-02-12,Multiple entities with same transaction,"
-Adding changes to code
+44,2020-02-19,Business questions,"
+UID for loan level or none -- confirm
 
-DB 
-
-Linkage approach
-Lists
-No custom objects -> Stephen to flush out the views, batching etc.
-
-
-
-","
-adding changes to code
-
-db 
-
-linkage approach
-lists
-no custom objects -> stephen to flush out the views, batching etc.
-
-
-
-"
-21,2020-02-12,SEAL output,"
-Their dates are normalized  - Supreme 12.16.16 - orig date
-
-LIBOR
-
-Legal entiteis remove \n
-
-Consumer will tag case 2
-
-","
-their dates are normalized  - supreme 12.16.16 - orig date
-
-libor
-
-legal entiteis remove \n
-
-consumer will tag case 2
-
-"
-22,2020-02-11,Align feedback with dimensions,"
-Align feedback with dimensions
-
-Business case 
-
-
-Opportunity cost
-Engagement rate/
-","
-align feedback with dimensions
-
-business case 
-
-
-opportunity cost
-engagement rate/
-"
-23,2020-02-06,relativity,"
-Confirmation on family and contract sets
-Multiple contract sets in 1 family
-
-
-Challenges:
-Contract set ID, Counter will keep changing
-If steps sequence is fixed, can be mitigated
-
-Parent Child, should happen after CS ID and Group ID are reviewed, qc.
-
-Typing ""P_"" should trigger script to pull correct CSID from DB.
-
-DFA_Parent_Child_ID is the only needed
-To confirm offline
-
-Contract vs doc level assignment
-Unassigned docs are getting counters at doc level
-Grouped docs are getting ID's at group level
-
-
-Open questions from last time
-Efficient way when user inputs value for Group ID -- less labor intensive
-user
-Search
-Validation searches
-Can't have users look in all docs
-
-Custom objects :Cannot control who creates custom objects
-Linking objects will create more work
-Creating linkage table new instances everytime
-
-Custom objects are not be used by Relativity approach.
-
-Room for error in process:
-Docs are linked to their own objects
-Unlink current doc -> filter objects for primary -> link it -> and do that for all remaining docs
-
-Have to keep track of ctrl number while linking-unlinking
-
-Parent child
-Operationally -> how to copy/paste large numbers of Grp ID
-Guard rails ￼
-Systematically figure out docs that are linked in a family
-
-[‎2/‎6/‎2020 2:10 PM]  
-also, i don't get how contract sets can span across customers 
- 
-ontract sets can span across customers 
-
-cuz it has multiple participants 
-5 lenders 
-then it will be for different family 
- 
-
-
-
-
-
-
-
-
+Double match -- flag this in accelerator TODO
 
 
 
 
 ","
-confirmation on family and contract sets
-multiple contract sets in 1 family
+uid for loan level or none -- confirm
 
-
-challenges:
-contract set id, counter will keep changing
-if steps sequence is fixed, can be mitigated
-
-parent child, should happen after cs id and group id are reviewed, qc.
-
-typing ""p_"" should trigger script to pull correct csid from db.
-
-dfa_parent_child_id is the only needed
-to confirm offline
-
-contract vs doc level assignment
-unassigned docs are getting counters at doc level
-grouped docs are getting id's at group level
-
-
-open questions from last time
-efficient way when user inputs value for group id -- less labor intensive
-user
-search
-validation searches
-can't have users look in all docs
-
-custom objects :cannot control who creates custom objects
-linking objects will create more work
-creating linkage table new instances everytime
-
-custom objects are not be used by relativity approach.
-
-room for error in process:
-docs are linked to their own objects
-unlink current doc -> filter objects for primary -> link it -> and do that for all remaining docs
-
-have to keep track of ctrl number while linking-unlinking
-
-parent child
-operationally -> how to copy/paste large numbers of grp id
-guard rails ￼
-systematically figure out docs that are linked in a family
-
-[‎2/‎6/‎2020 2:10 pm]  
-also, i don't get how contract sets can span across customers 
- 
-ontract sets can span across customers 
-
-cuz it has multiple participants 
-5 lenders 
-then it will be for different family 
- 
-
-
-
-
-
-
-
-
+double match -- flag this in accelerator <h5>todo</h5>
 
 
 
 
 "
-24,2020-02-06,relativity,"
+45,2020-02-19,Business questions,"
+V1 within doc ID 
+How to strip ContractID from text
 
-Documents are initially pushed to Relativity via Import API 
-Four relational family fields exist in Relativity 
 
-GroupID_Proposed 
-GroupID_Validated 
-ContractSetID_Proposed 
-ContractSetID_Validated 
+Exact match
 
-
-Documents are read into Accelerators 
-Accelerators assigns values to docs that can be linked 
-
-Accelerators write values to GroupID_Proposed for validation 
-
-E.g., G00000001 
-
-
-Accelerators write values to ContractSetID_Proposed for validation 
-
-E.g., CS00000001 
-
-
-
-
-Accelerators assigns values to docs that cannot be linked 
-
-Accelerator assigns GroupID_Proposed = G_######## where each assignment is unique (every unassigned document gets a unique incremented value +1) 
-Accelerator assigns ContractSetID_Proposed = CS_######## where each assignment is unique (every unassigned document gets a unique incremented value +1) 
-
-
-Values are written back to Relativity via Python --> SQL 
-Accelerator validation 
-
-During validation, a user confirms the proposed linkage by transferring the value from GroupID_Proposed to GroupID_Validated and marking the document complete for the batch set 
-
-If the family needs to be broken, the user changes the GroupID prefix of the affected family member from G######## --> G[A-Z]######## 
-
-
-During validation, a user confirms the proposed linkage by transferring the value from ContractSetID_Proposed to ContractSetID_Validated and marking the document complete for the batch set 
-
-If the ContractSetID needs to be broken, the user changes the ContractSetID prefix of the affected family member from CS######## --> CS[A-Z]######## 
-
-
-
-
-Unassigned document linkage and validation 
-
-Users review unassigned documents, which have G_######## unique values in GroupID_Proposed 
-Users review unassigned documents, which have CS_######## unique values in ContractSetID_Proposed 
-When a family of documents is identified, there are three scenarios  
-
-If a G_######## document belongs to a family that contains a G_######## document, the user changes the proposed value to the corresponding G_######## value to link the documents together. In other words, G > G_ 
-If multiple G_######## documents belong to the same family, the user conforms the proposed value for all docs to the smallest G_######## within the family 
-If a G_######## document does not belong to a family then the proposed value remains G_######## (I.e., standalones retain their assigned G_#). 
-User also performs the same task for CS. 
-
-
-Upon accepting the value, the user copies the values to GroupID_Validated and ContractSetID_Validated and marks the document complete for the batch set. 
-
-
-Rules 
-
-G > G_ 
-G is never downgraded to G_, it can only be changed to G[A-Z] 
-If the user marks a document not in their batch, they mark a field indicating they did so (""hey I was here"") 
-
-
- 
-
-Which batches use which relational groups? Relativity todo 
-What is the purpose of the Parent_Child_ID and when is it used? Doesn't make sense to assign before the ContractSetID is QCed and accepted. If it's not used within Relativity, it should be incremented after the family is done. 
-
-
-Open questions  
-","
-
-documents are initially pushed to relativity via import api 
-four relational family fields exist in relativity 
-
-groupid_proposed 
-groupid_validated 
-contractsetid_proposed 
-contractsetid_validated 
-
-
-documents are read into accelerators 
-accelerators assigns values to docs that can be linked 
-
-accelerators write values to groupid_proposed for validation 
-
-e.g., g00000001 
-
-
-accelerators write values to contractsetid_proposed for validation 
-
-e.g., cs00000001 
-
-
-
-
-accelerators assigns values to docs that cannot be linked 
-
-accelerator assigns groupid_proposed = g_######## where each assignment is unique (every unassigned document gets a unique incremented value +1) 
-accelerator assigns contractsetid_proposed = cs_######## where each assignment is unique (every unassigned document gets a unique incremented value +1) 
-
-
-values are written back to relativity via python --> sql 
-accelerator validation 
-
-during validation, a user confirms the proposed linkage by transferring the value from groupid_proposed to groupid_validated and marking the document complete for the batch set 
-
-if the family needs to be broken, the user changes the groupid prefix of the affected family member from g######## --> g[a-z]######## 
-
-
-during validation, a user confirms the proposed linkage by transferring the value from contractsetid_proposed to contractsetid_validated and marking the document complete for the batch set 
-
-if the contractsetid needs to be broken, the user changes the contractsetid prefix of the affected family member from cs######## --> cs[a-z]######## 
-
-
-
-
-unassigned document linkage and validation 
-
-users review unassigned documents, which have g_######## unique values in groupid_proposed 
-users review unassigned documents, which have cs_######## unique values in contractsetid_proposed 
-when a family of documents is identified, there are three scenarios  
-
-if a g_######## document belongs to a family that contains a g_######## document, the user changes the proposed value to the corresponding g_######## value to link the documents together. in other words, g > g_ 
-if multiple g_######## documents belong to the same family, the user conforms the proposed value for all docs to the smallest g_######## within the family 
-if a g_######## document does not belong to a family then the proposed value remains g_######## (i.e., standalones retain their assigned g_#). 
-user also performs the same task for cs. 
-
-
-upon accepting the value, the user copies the values to groupid_validated and contractsetid_validated and marks the document complete for the batch set. 
-
-
-rules 
-
-g > g_ 
-g is never downgraded to g_, it can only be changed to g[a-z] 
-if the user marks a document not in their batch, they mark a field indicating they did so (""hey i was here"") 
-
-
- 
-
-which batches use which relational groups? relativity <h5 class='red-color'>todo</h5> 
-what is the purpose of the parent_child_id and when is it used? doesn't make sense to assign before the contractsetid is qced and accepted. if it's not used within relativity, it should be incremented after the family is done. 
-
-
-open questions  
-"
-25,2020-02-06,relativity,"
-Design recommendation for GroupID:
-
-
-List feature in relativity to record 
-List addressed error in manual process to 
-
-Copy-paste from user to create GroupID
-
-
-
-
-Relativity load approach:
-API
-Platform support/Infra -> installer
-
-Relativity TODO
-Send out summary of approach/any changes
-Any open questions
-
-Presentable version (Relativity TODO) -- Stephen
-Custom objects, batch logic, views, layouts fields by  end of this week and early next week
-Info sec -> EY servers port + firewall
-
-GJ infra on WF side  (Relativity + Siddharth TODO)
-Accelerator <-> Relativity DB 
-SLHS team + accelerator team to identify risks/challenges/dependencies
-Authentication, firewall, ports etc.
-Share with WF -> Gary
-WF will be responsible for infra
-WF will setup relativity
-
-ICMP data (Accelerator TODO)
-Where is it coming from ?
-For current 150, doable, issue for 1500 by march
-
-Open questions
-1 contract multiple groupID
-How to source documents
-Still in discussion
-
-MVP 0 : (TODO)
-Seal, ICMP how does this data flow
-Seal cannot overlay ICMP data unless its in NAS
-Suggest approach and connect with correct WF team
-
-Accelerator can be scheduled/relativity can trigger
-We don't have control over when review happens
-Don't make relativity trigger 
-API -> push into relativity (automated) when ppl are not reviewing with flag -> accelerator will then run at specific times 
-EOD/ mid-day fixed schedule -> should not conflict with biz ops review
-
-
-MVP:
-Seal -> Relativity -> Accelerator
-Will have ICMP data, contract store will not be ready
-
-
-
-","
-design recommendation for groupid:
-
-
-list feature in relativity to record 
-list addressed error in manual process to 
-
-copy-paste from user to create groupid
-
-
-
-
-relativity load approach:
-api
-platform support/infra -> installer
-
-relativity <h5 class='red-color'>todo</h5>
-send out summary of approach/any changes
-any open questions
-
-presentable version (relativity <h5 class='red-color'>todo</h5>) -- stephen
-custom objects, batch logic, views, layouts fields by  end of this week and early next week
-info sec -> ey servers port + firewall
-
-gj infra on wf side  (relativity + siddharth <h5 class='red-color'>todo</h5>)
-accelerator <-> relativity db 
-slhs team + accelerator team to identify risks/challenges/dependencies
-authentication, firewall, ports etc.
-share with wf -> gary
-wf will be responsible for infra
-wf will setup relativity
-
-icmp data (accelerator <h5 class='red-color'>todo</h5>)
-where is it coming from ?
-for current 150, doable, issue for 1500 by march
-
-open questions
-1 contract multiple groupid
-how to source documents
-still in discussion
-
-mvp 0 : (<h5 class='red-color'>todo</h5>)
-seal, icmp how does this data flow
-seal cannot overlay icmp data unless its in nas
-suggest approach and connect with correct wf team
-
-accelerator can be scheduled/relativity can trigger
-we don't have control over when review happens
-don't make relativity trigger 
-api -> push into relativity (automated) when ppl are not reviewing with flag -> accelerator will then run at specific times 
-eod/ mid-day fixed schedule -> should not conflict with biz ops review
-
-
-mvp:
-seal -> relativity -> accelerator
-will have icmp data, contract store will not be ready
-
-
-
-"
-26,2020-02-11,relativity,"
-Design recommendation for GroupID:
-
-
-List feature in relativity to record 
-List addressed error in manual process to 
-
-Copy-paste from user to create GroupID
-
-
-
-
-Relativity load approach:
-API
-Platform support/Infra -> installer
-
-Relativity TODO
-Send out summary of approach/any changes
-Any open questions
-
-Presentable version (Relativity TODO) -- Stephen
-Custom objects, batch logic, views, layouts fields by  end of this week and early next week
-Info sec -> EY servers port + firewall
-
-GJ infra on WF side  (Relativity + Siddharth TODO)
-Accelerator <-> Relativity DB 
-SLHS team + accelerator team to identify risks/challenges/dependencies
-Authentication, firewall, ports etc.
-Share with WF -> Gary
-WF will be responsible for infra
-WF will setup relativity
-
-ICMP data (Accelerator TODO)
-Where is it coming from ?
-For current 150, doable, issue for 1500 by march
-
-Open questions
-1 contract multiple groupID
-How to source documents
-Still in discussion
-
-MVP 0 : (TODO)
-Seal, ICMP how does this data flow
-Seal cannot overlay ICMP data unless its in NAS
-Suggest approach and connect with correct WF team
-
-Accelerator can be scheduled/relativity can trigger
-We don't have control over when review happens
-Don't make relativity trigger 
-API -> push into relativity (automated) when ppl are not reviewing with flag -> accelerator will then run at specific times 
-EOD/ mid-day fixed schedule -> should not conflict with biz ops review
-
-
-MVP:
-Seal -> Relativity -> Accelerator
-Will have ICMP data, contract store will not be ready
-
-
-
-","
-design recommendation for groupid:
-
-
-list feature in relativity to record 
-list addressed error in manual process to 
-
-copy-paste from user to create groupid
-
-
-
-
-relativity load approach:
-api
-platform support/infra -> installer
-
-relativity <h5 class='red-color'>todo</h5>
-send out summary of approach/any changes
-any open questions
-
-presentable version (relativity <h5 class='red-color'>todo</h5>) -- stephen
-custom objects, batch logic, views, layouts fields by  end of this week and early next week
-info sec -> ey servers port + firewall
-
-gj infra on wf side  (relativity + siddharth <h5 class='red-color'>todo</h5>)
-accelerator <-> relativity db 
-slhs team + accelerator team to identify risks/challenges/dependencies
-authentication, firewall, ports etc.
-share with wf -> gary
-wf will be responsible for infra
-wf will setup relativity
-
-icmp data (accelerator <h5 class='red-color'>todo</h5>)
-where is it coming from ?
-for current 150, doable, issue for 1500 by march
-
-open questions
-1 contract multiple groupid
-how to source documents
-still in discussion
-
-mvp 0 : (<h5 class='red-color'>todo</h5>)
-seal, icmp how does this data flow
-seal cannot overlay icmp data unless its in nas
-suggest approach and connect with correct wf team
-
-accelerator can be scheduled/relativity can trigger
-we don't have control over when review happens
-don't make relativity trigger 
-api -> push into relativity (automated) when ppl are not reviewing with flag -> accelerator will then run at specific times 
-eod/ mid-day fixed schedule -> should not conflict with biz ops review
-
-
-mvp:
-seal -> relativity -> accelerator
-will have icmp data, contract store will not be ready
-
-
-
-"
-27,2020-02-11,Manish server,"
-Python added to env variables
-
-Process flow as discussed:
-
-Develop code on VDI
-Use mapped drive from VDI to place code on accelerator server & test 
-Tweak code if necessary and update VDI to reflect any changes
-Push codebase to appropriate Git repo + branch 
-Work with deployment team to wrap/align codebase into deployment ready format/containers etc.
-Release 
-
-
-
-
-
-
-
+CRE + consumer +CMS -> Loan number is contractID
 
 
 
 
 ","
-python added to env variables
-
-process flow as discussed:
-
-develop code on vdi
-use mapped drive from vdi to place code on accelerator server & test 
-tweak code if necessary and update vdi to reflect any changes
-push codebase to appropriate git repo + branch 
-work with deployment team to wrap/align codebase into deployment ready format/containers etc.
-release 
+v1 within doc id 
+how to strip contractid from text
 
 
+exact match
 
-
-
-
-
+cre + consumer +cms -> loan number is contractid
 
 
 
 
 "
-28,2020-02-11,qotF/ZU$Wb?Qr6`Xi?q3,"
-qotF/ZU$Wb?Qr6`Xi?q3
-","
-qotf/zu$wb?qr6`xi?q3
-"
-29,2020-02-11,qotF/ZU$Wb?Qr6`Xi?q3,"
-Ranga + thomas
+46,2020-02-19,WIM,"
+No fields currently answer
+Dates are detected
+Not agreement name
 
-Workflow API team and 
+Addresses are not captured
 
-Call it out to that we will use VDI
-
-
-","
-ranga + thomas
-
-workflow api team and 
-
-call it out to that we will use vdi
-
-
-"
-30,2020-02-10,Manish: Server + git,"
-Work locations for  - to be shipped Ran, Amanda, Nikhil, Amber and I
-Kora wanted this information ?
-
-RDC -> cdvwa33a0413
-Access is still pending
-Manish requested
-RSA
-
-Again wells password
-Add python -> Env variable TODO WF
-
-We can't get it bcz of RSA
-
+Show them contracts
+Walk them through fields you're looking for
 
 
 
 
 ","
-work locations for  - to be shipped ran, amanda, nikhil, amber and i
-kora wanted this information ?
+no fields currently answer
+dates are detected
+not agreement name
 
-rdc -> cdvwa33a0413
-access is still pending
-manish requested
-rsa
+addresses are not captured
 
-again wells password
-add python -> env variable <h5 class='red-color'>todo</h5> wf
-
-we can't get it bcz of rsa
-
+show them contracts
+walk them through fields you're looking for
 
 
 
 
 "
-31,2020-02-10,Manish: Server + git,"
+47,2020-02-19,Relativity questions,"
+Match by LE mark differently
+
+Match CS001, CS001 as same groupID by defult -> assumption
+Or should we keep it as noe
+Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
+
+How is review being done ?
+Look at other docs ?
+","
+match by le mark differently
+
+match cs001, cs001 as same groupid by defult -> assumption
+or should we keep it as noe
+or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
+
+how is review being done ?
+look at other docs ?
+"
+48,2020-02-19,Relativity questions,"
 
 ","
 
 "
-32,2020-02-10,,"
+49,2020-02-19,SEAL WIM,"
+Clearing linkage
+
+Fields:
+Date (of clearing agreement)
+Broker Name 
+Clearing Firm Name
+Broker Address
+Clearing Firm Address
+Date (of Amendment & Schedule A)
+Maturity Date
+
+Agreement
+No agreement name -> captured in contractType
+LE: captured, contract mentions roles but not SEAL
+Start date: captured
+Address: broker and first clearing address mentioned separately in doc
 
 
+Schedule A
+No agreement name
+Start date: captured
+Maturity Date: multiple captured correct
+LE: captured: need to see who is broker and who is clearing firm
 ","
+clearing linkage
+
+fields:
+date (of clearing agreement)
+broker name 
+clearing firm name
+broker address
+clearing firm address
+date (of amendment & schedule a)
+maturity date
+
+agreement
+no agreement name -> captured in contracttype
+le: captured, contract mentions roles but not seal
+start date: captured
+address: broker and first clearing address mentioned separately in doc
 
 
+schedule a
+no agreement name
+start date: captured
+maturity date: multiple captured correct
+le: captured: need to see who is broker and who is clearing firm
 "
-33,2020-02-07,Relativity,"
-Connection from localhost machine/available servers that can access DB and have python. 
-
-Query data from into temporary data file/object.  
-
- 
-
-Making this connection may be easier. But need confirmation
-The current localhost does have python but the required packages for this exercise will have to be installed 
-
-
-
-
+50,2020-02-19,Address -> enhancements,"
+Address -> enhancements
 ","
-connection from localhost machine/available servers that can access db and have python. 
-
-query data from into temporary data file/object.  
-
- 
-
-making this connection may be easier. but need confirmation
-the current localhost does have python but the required packages for this exercise will have to be installed 
-
-
-
-
+address -> enhancements
 "
-34,2020-02-07,Python DB,"
-Fire wall rule for the 
-1 week
+51,2020-02-18,relativity,"
+Fields <-> relativity database
 
-Certificates
-Windows ID
+SEAL
+Dedupe scripts
 
-SQL ID instead of AD ID within python script
-
-Brian -
-
-
-","
-fire wall rule for the 
-1 week
-
-certificates
-windows id
-
-sql id instead of ad id within python script
-
-brian -
+Where dedupe
+Where the txt xml script sit ?
+TODO accelerator to get back
 
 
-"
-35,2020-02-07,Python DB,"
+RC, SBU to be added relativity
+TODO accelerator share
+TODO excel share static files xls
 
-
-Document table
-","
-
-
-document table
-"
-36,2020-02-07,Python DB,"
-Powershell script to read data
-
- invoke sql command
-
-
-","
-powershell script to read data
-
- invoke sql command
-
-
-"
-37,2020-02-07,Python DB,"
-
-Servers
-
--ifconfig
+Load static files into custom objects/ table
 
 
 
 ","
+fields <-> relativity database
 
-servers
+seal
+dedupe scripts
 
--ifconfig
+where dedupe
+where the txt xml script sit ?
+<h5>todo</h5> accelerator to get back
+
+
+rc, sbu to be added relativity
+<h5>todo</h5> accelerator share
+<h5>todo</h5> excel share static files xls
+
+load static files into custom objects/ table
 
 
 
-"
-38,2020-02-07,Python DB,"
-Not being able to use server
-
-Name change in certificate
-Add port number that database numbers
-
-","
-not being able to use server
-
-name change in certificate
-add port number that database numbers
-
-"
-39,2020-02-07,Python DB,"
-NAS access for siddharth to save scripts
-","
-nas access for siddharth to save scripts
 "
 </div>
     </body>

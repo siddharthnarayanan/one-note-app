@@ -1,0 +1,634 @@
+Microsoft Windows [Version 10.0.17134.1304]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\SA598XF\Desktop\#Siddharth\#Dev\one-note-manager>python app.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [21/Feb/2020 20:21:55] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-02-21 20:21:58,491] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:21:58] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Feb/2020 20:21:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2020-02-21 20:22:40,255] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:22:40] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+[2020-02-21 20:22:47,798] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:22:47] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Feb/2020 20:23:06] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [21/Feb/2020 20:23:06] "[37mGET /login HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Feb/2020 20:23:34] "[37mGET /getAToken?error=server_error&error_description=The%20request%20could%20not%20be%20completed.%20Please%20try%20again%20later.&state=0621fa99-da51-4ab6-a485-803ef96d333e HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Feb/2020 20:23:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [21/Feb/2020 20:23:39] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [21/Feb/2020 20:23:40] "[37mGET /login HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Feb/2020 20:23:42] "[32mGET /pagescontent HTTP/1.1[0m" 302 -
+127.0.0.1 - - [21/Feb/2020 20:23:42] "[32mGET /pagescontent HTTP/1.1[0m" 302 -
+127.0.0.1 - - [21/Feb/2020 20:23:42] "[37mGET /login HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Feb/2020 20:23:45] "[32mGET /pagescontent HTTP/1.1[0m" 302 -
+127.0.0.1 - - [21/Feb/2020 20:23:45] "[37mGET /login HTTP/1.1[0m" 200 -
+[2020-02-21 20:28:36,625] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:28:36] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+[2020-02-21 20:28:54,635] ERROR in app: Exception on /pages [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 178, in pages
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:28:54] "[1m[35mGET /pages HTTP/1.1[0m" 500 -
+[2020-02-21 20:28:57,073] ERROR in app: Exception on /pages [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 178, in pages
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 230, in _get_token_from_cache
+    result = cca.acquire_token_silent(scope, account=accounts[0])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 452, in acquire_token_silent
+    scopes, account, authority, force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 500, in acquire_token_silent_with_error
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 561, in _acquire_token_silent_from_cache_and_possibly_refresh_it
+    force_refresh=force_refresh, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 597, in _acquire_token_silent_by_finding_rt_belongs_to_me_or_my_family
+    authority, scopes, dict(query, client_id=self.client_id), **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 628, in _acquire_token_silent_by_finding_specific_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 448, in obtain_token_by_refresh_token
+    **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 180, in obtain_token_by_refresh_token
+    return self._obtain_token("refresh_token", data=data, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oidc.py", line 83, in _obtain_token
+    ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 399, in _obtain_token
+    grant_type, params, _data, *args, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\oauth2cli\oauth2.py", line 157, in _obtain_token
+    resp.raise_for_status()  # TODO: Will probably retry here
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://login.microsoftonline.com/common/oauth2/v2.0/token
+127.0.0.1 - - [21/Feb/2020 20:28:57] "[1m[35mGET /pages HTTP/1.1[0m" 500 -
+[2020-02-22 10:48:19,651] ERROR in app: Exception on /pages [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61EE0B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61EE0B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 178, in pages
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 227, in _get_token_from_cache
+    cca = _build_msal_app(cache=cache)
+  File "app.py", line 217, in _build_msal_app
+    client_credential=app_config.CLIENT_SECRET, token_cache=cache)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 171, in __init__
+    validate_authority, verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 78, in __init__
+    verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 128, in tenant_discovery
+    resp = requests.get(tenant_discovery_endpoint, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61EE0B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+127.0.0.1 - - [22/Feb/2020 10:48:19] "[1m[35mGET /pages HTTP/1.1[0m" 500 -
+127.0.0.1 - - [22/Feb/2020 10:50:52] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-02-22 10:51:22,086] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C6205A308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C6205A308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 227, in _get_token_from_cache
+    cca = _build_msal_app(cache=cache)
+  File "app.py", line 217, in _build_msal_app
+    client_credential=app_config.CLIENT_SECRET, token_cache=cache)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 171, in __init__
+    validate_authority, verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 78, in __init__
+    verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 128, in tenant_discovery
+    resp = requests.get(tenant_discovery_endpoint, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C6205A308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2020-02-22 10:51:22,090] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C62060508>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C62060508>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 227, in _get_token_from_cache
+    cca = _build_msal_app(cache=cache)
+  File "app.py", line 217, in _build_msal_app
+    client_credential=app_config.CLIENT_SECRET, token_cache=cache)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 171, in __init__
+    validate_authority, verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 78, in __init__
+    verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 128, in tenant_discovery
+    resp = requests.get(tenant_discovery_endpoint, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C62060508>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+127.0.0.1 - - [22/Feb/2020 10:51:22] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+127.0.0.1 - - [22/Feb/2020 10:51:22] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+[2020-02-22 10:51:22,424] ERROR in app: Exception on /pagescontent [GET]
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61ED4F08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61ED4F08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 160, in pagescontent
+    token = _get_token_from_cache(app_config.SCOPE)
+  File "app.py", line 227, in _get_token_from_cache
+    cca = _build_msal_app(cache=cache)
+  File "app.py", line 217, in _build_msal_app
+    client_credential=app_config.CLIENT_SECRET, token_cache=cache)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\application.py", line 171, in __init__
+    validate_authority, verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 78, in __init__
+    verify=verify, proxies=proxies, timeout=timeout)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\msal\authority.py", line 128, in tenant_discovery
+    resp = requests.get(tenant_discovery_endpoint, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\SA598XF\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /common/v2.0/.well-known/openid-configuration (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000017C61ED4F08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+127.0.0.1 - - [22/Feb/2020 10:51:22] "[1m[35mGET /pagescontent HTTP/1.1[0m" 500 -
+127.0.0.1 - - [22/Feb/2020 10:59:43] "[37mGET / HTTP/1.1[0m" 200 -
+session['user']['iss']:  https://login.microsoftonline.com/9188040d-6c67-4c5b-b112-36a304b66dad/v2.0/me/photo
+pic_data:
+app.py:130: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 130 of the file app.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  soup = BeautifulSoup(graph_data)
+output:  2020-02-20T17:36:00.0000000
+output:  2020-02-21T14:54:00.0000000
+output:  2020-02-20T10:23:00.0000000
+output:  2020-02-21T12:34:00.0000000
+output:  2020-02-20T21:02:00.0000000
+output:  2020-02-19T20:12:00.0000000
+output:  2020-02-20T16:09:00.0000000
+output:  2020-02-20T15:28:00.0000000
+output:  2020-02-20T14:08:00.0000000
+output:  2020-02-19T11:43:00.0000000
+output:  2020-02-06T14:43:00.0000000
+output:  2020-02-19T18:50:00.0000000
+output:  2020-02-19T18:10:00.0000000
+output:  2020-02-19T18:37:00.0000000
+output:  2020-02-19T17:26:00.0000000
+output:  2020-02-19T13:52:00.0000000
+output:  2020-02-19T11:44:00.0000000
+output:  2020-02-19T10:27:00.0000000
+output:  2020-02-18T14:23:00.0000000
+output:  2020-02-18T16:39:00.0000000
+data_df:            date  ...
+0   2020-02-20  ...  \nparabole\n\ncurrently uses dow jones api\nco...
+1   2020-02-21  ...  \nonly my profile on the server has packages +...
+2   2020-02-20  ...  \n\napi and technical: \nkira \n\nend to end u...
+3   2020-02-20  ...  \ney:\nteams have created accounts \nevaluatio...
+4   2020-02-20  ...  \nbusiness case <h5>todo</h5>\n\nco-develop us...
+5   2020-02-21  ...                              \nedf team \ngj\n\n\n
+6   2020-02-19  ...  \nfollow up from previous meeting:\ndedupe -> ...
+7   2020-02-19  ...                                               \n\n
+8   2020-02-20  ...  \napplication server account\n\nsql server loc...
+9   2020-02-20  ...                                               \n\n
+10  2020-02-20  ...  \np1 – approach overview:\n\nbrief description...
+11  2020-02-19  ...  \nfindings\n\nassessment\n\nicmp, seal data is...
+12  2020-02-19  ...  \noverall threshold\n\ndate + principal + le\n...
+13  2020-02-19  ...  \nbusiness input :\ncreate hierarchy matrix fo...
+14  2020-02-06  ...  \nasynchronous  api calls\n\nhow to embed char...
+15  2020-02-06  ...  \nkira \n\nend to end upload api\ndocument int...
+16  2020-02-19  ...  \ncreate sample static file for terms to match...
+17  2020-02-19  ...  \ncj questions\n\nis l1 optional for some type...
+18  2020-02-19  ...  \nuid for loan level or none -- confirm\n\ndou...
+19  2020-02-19  ...  \nv1 within doc id \nhow to strip contractid f...
+20  2020-02-19  ...  \nno fields currently answer\ndates are detect...
+21  2020-02-19  ...  \nmatch by le mark differently\n\nmatch cs001,...
+22  2020-02-19  ...                                               \n\n
+23  2020-02-19  ...  \nclearing linkage\n\nfields:\ndate (of cleari...
+24  2020-02-19  ...                        \naddress -> enhancements\n
+25  2020-02-18  ...  \nfields <-> relativity database\n\nseal\ndedu...
+
+[26 rows x 4 columns]
+127.0.0.1 - - [22/Feb/2020 11:00:02] "[37mGET /pagescontent HTTP/1.1[0m" 200 -
