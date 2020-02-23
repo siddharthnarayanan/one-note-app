@@ -2,6 +2,7 @@
 
 ## To run application:  
 Clone repo and run ```python app.py``` in the directory
+
 ![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/ui_1.jpg)
 
 ## To create new application:
