@@ -2,7 +2,7 @@
 
 ## To run application:  
 1. Clone repo 
-2. Add your ClientID and Secret in **config.py**
+2. Add your ClientID and Secret in **app_config.py**
 3. Run ```python app.py``` in the directory
 
 ![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/ui_1.jpg)
