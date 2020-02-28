@@ -61,91 +61,1006 @@
              });
         </script>
         <div id="output" style="display: none;">,date,  , ,   
-0,2020-02-20,ESG,"
-PARAbole
+0,2020-02-27,Stack: The accelerator is designed as an analytics layer on top of relativity database. We use:,"
+Stack: The accelerator is designed as an analytics layer on top of relativity database. We use:
 
-Currently uses DOW Jones API
-Contexts within Social, Environment and Governance
-News activity is captured using frequency and strength -- not Sentiment analysis 
-Disclosures are more important than news
-Product mapping -> demo had industry mapping due to some data sharing constraints
+Application: Python
+Database: SQL (Relativity database)
 
-Unsupervised learning model
-Generates corpus -- standard agnostic SBAS, GCI 
-Trains on narratives, new custom one can be readily trained
-Pre-trained on 75k documents
-Each step is validated at checkpoints 
-training is reviewed  manually using a random sample
-OCR is ABBYY for scanning. Disclosures are searchable pdf's to directly converted to text
-Text is broken into paragraphs using their custom script
+ 
+Project Structure:
 
-UI is simple, actual use as platform
-Multiple use cases - LIBOR, tables
-Nested tables - they have codebase
-Highlights text within document 
-PII - classifier -- primary context, secondary context 
+Input: Any required static input data
+Src (source)
 
-Azure, Kubernetes
-Readily scalable
-On-prem, integratable with AWS
-Integrated with SharePoint 
+Core document family analysis module: Create document families using extractions + metadata
+Clustering module: Embeddings + clustering for documents that could not be linked using extractions + metadata
+Database interaction module: Read + Write to Relativity SQL database
 
-Approach 
-Wrap their baseline models into our solution
-Augment models if required and business rules, post-processing layer
+
+Output: output folder for any created files
+Log: logs with timestamp
+Docs: Documentation on environment setup etc.
+
+","
+stack: the accelerator is designed as an analytics layer on top of relativity database. we use:
+
+application: python
+database: sql (relativity database)
+
+ 
+project structure:
+
+input: any required static input data
+src (source)
+
+core document family analysis module: create document families using extractions + metadata
+clustering module: embeddings + clustering for documents that could not be linked using extractions + metadata
+database interaction module: read + write to relativity sql database
+
+
+output: output folder for any created files
+log: logs with timestamp
+docs: documentation on environment setup etc.
+
+"
+1,2020-02-27,python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv,"
+python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv
+","
+python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv
+"
+2,2020-02-27,python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv,"
+[INFO] 2019-09-11 20:16:09 > Run name : BERT-BERT-{phase}-layers_count={layers_count}-hidden_size={hidden_size}-heads_count={heads_count}-{timestamp}-layers_count=1-hidden_size=128-heads_count=2-2019_09_11_20_16_09
+[INFO] 2019-09-11 20:16:09 > {'config_path': None, 'data_dir': None, 'train_path': 'data/dicr/train.txt', 'val_path': 'data/dicr/val.txt', 'dictionary_path': 'dictionary.txt', 'checkpoint_dir': None, 'log_output': None, 'dataset_limit': None, 'epochs': 100, 'batch_size': 16, 'print_every': 1, 'save_every': 10, 'vocabulary_size': 30000, 'max_len': 512, 'lr': 0.001, 'clip_grads': False, 'layers_count': 1, 'hidden_size': 128, 'heads_count': 2, 'd_ff': 128, 'dropout_prob': 0.1, 'device': 'cpu', 'function': <function pretrain at 0x7fd23c8ff0d0>}
+","
+[info] 2019-09-11 20:16:09 > run name : bert-bert-{phase}-layers_count={layers_count}-hidden_size={hidden_size}-heads_count={heads_count}-{timestamp}-layers_count=1-hidden_size=128-heads_count=2-2019_09_11_20_16_09
+[info] 2019-09-11 20:16:09 > {'config_path': none, 'data_dir': none, 'train_path': 'data/dicr/train.txt', 'val_path': 'data/dicr/val.txt', 'dictionary_path': 'dictionary.txt', 'checkpoint_dir': none, 'log_output': none, 'dataset_limit': none, 'epochs': 100, 'batch_size': 16, 'print_every': 1, 'save_every': 10, 'vocabulary_size': 30000, 'max_len': 512, 'lr': 0.001, 'clip_grads': false, 'layers_count': 1, 'hidden_size': 128, 'heads_count': 2, 'd_ff': 128, 'dropout_prob': 0.1, 'device': 'cpu', 'function': <function pretrain at 0x7fd23c8ff0d0>}
+"
+3,2020-02-27,python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv,"
+
+","
+
+"
+4,2020-02-27,python main.py finetune --pretrained_checkpoint model.pth --train_data data/dicr/train.tsv --val_data data/dicr/dev.tsv,"
+python maint.py pretrain --train_data data/dicr/train.txt --val_data data/dicr/val.txt --checkpoint_output model.pth
+
+From <https://github.com/dreamgonfly/BERT-pytorch> 
+","
+python maint.py pretrain --train_data data/dicr/train.txt --val_data data/dicr/val.txt --checkpoint_output model.pth
+
+from <https://github.com/dreamgonfly/bert-pytorch> 
+"
+5,2020-02-27,relativity,"
+Python DB 
+Call
+
+Accelerator 
+Walkthrough
+Output-> upload
+Testing how to persist data back
+Use controlnumber to identify right rows
+Use update query
+
+
+
+Multiple docs
+Rashmi-> doll
+
+Any other open items ?
+
+","
+python db 
+call
+
+accelerator 
+walkthrough
+output-> upload
+testing how to persist data back
+use controlnumber to identify right rows
+use update query
+
+
+
+multiple docs
+rashmi-> doll
+
+any other open items ?
+
+"
+6,2020-02-27,relativity,"
+Relativity TODO
+Test accelerator output doc
+
+Accelerator TODO
+Test writing back to DB 
+ControlNumber is the unique key
+","
+relativity <h5>todo</h5>
+test accelerator output doc
+
+accelerator <h5>todo</h5>
+test writing back to db 
+controlnumber is the unique key
+"
+7,2020-02-27,notice,"
+The Address field was identified as a must-have field to be captured for the document family accelerator to match linked documents based on addresses for the contracting parties. This was communicated to SEAL in EY's rulebook.
+
+SEAL activated the ""QFC_Notice"" field to try and capture text in the notice section of the documents (which can include the address of the parties) in an effort to capture the addresses mentioned within the text, but the extracted text will require extensive transformation/processing to capture the accurate address value. SEAL currently cannot extract this and has also confirmed that a field to specifically extract addresses is not currently in scope.
+
+This poses a risk to the performance of the accelerator as it will be unable to match useful address values for contracting parties to link documents.
+","
+the address field was identified as a must-have field to be captured for the document family accelerator to match linked documents based on addresses for the contracting parties. this was communicated to seal in ey's rulebook.
+
+seal activated the ""qfc_notice"" field to try and capture text in the notice section of the documents (which can include the address of the parties) in an effort to capture the addresses mentioned within the text, but the extracted text will require extensive transformation/processing to capture the accurate address value. seal currently cannot extract this and has also confirmed that a field to specifically extract addresses is not currently in scope.
+
+this poses a risk to the performance of the accelerator as it will be unable to match useful address values for contracting parties to link documents.
+"
+8,2020-02-27,SEAL,"
+Amendment 
+Does not have notice section -> address
+","
+amendment 
+does not have notice section -> address
+"
+9,2020-02-27,#1 - List of packages that you provide should have included all dependencies (packages and sub-packages). This is relatively a new uncharted territory for the Bank. I am again requesting that team ensure completeness of the prerequisite of the accelerator,"
+Contacts, steps, procedure
+
+UAT￼
+Deploy
+
+
+Security
+
+Compile with gary's list
+
+
+Get the python code into GitHub
+
+2.  Get CICD set up
+3.  Complete development within the Wells Fargo network and env. Unfortunately WF will not allow anyone to pass code via email or map any drive to GitHub.
+","
+contacts, steps, procedure
+
+uat￼
+deploy
+
+
+security
+
+compile with gary's list
+
+
+get the python code into github
+
+2.  get cicd set up
+3.  complete development within the wells fargo network and env. unfortunately wf will not allow anyone to pass code via email or map any drive to github.
+"
+10,2020-02-27,#1 - List of packages that you provide should have included all dependencies (packages and sub-packages). This is relatively a new uncharted territory for the Bank. I am again requesting that team ensure completeness of the prerequisite of the accelerator,"
+
+#1 - List of packages that you provide should have included all dependencies (packages and sub-packages). This is relatively a new uncharted territory for the Bank. I am again requesting that team ensure completeness of the prerequisite of the accelerators and work with Architecture team to confirm the availability. 
+ 
+If you are making any assumptions, please call them out. We need to avoid future surprises and stay on track. Each time we find something that is not accounted requires a fresh architecture review and that has the potential to impact our key milestones. 
+ 
+EY has provided WF with list of required packages for NLP, ML tasks for current sprint
+
+We provide the main package names (Spacy, numpy etc.) in our list. These come with a standard set of prerequisite sub-packages but any missing sub-packages can still show up during installation process are due to platform differences, env setup 
+Packages are installed to be readily imported into Python. 
+Any downloaded package source files for will be successfully compiled and installed.
+
+
+Due to WF installation process and limited access to public repositories, any missing packages have to be identified in WF repo and individually installed. This is true for any sub-packages required by the main packages to be installed.
+EY has documented procedure for package installation and can provide expansive snapshot of  packages currently installed on server to successfully run codebase. This can be leveraged to setup new env 
+
+
+WF Contact:
+Sahib, Manish
+
+Timeline for code freeze:
+Steps:
+Complete development within the Wells Fargo network and env:
+Get the python code into GitHub: EY has identified approach to install Github desktop client on VDI to push/pull code from required Git repo. Currently testing process
+
+Deployment:  EY team is reviewing process and documentation on the automated CICD pipeline. Sahib to lead deployment steps once EY developers push code base to Git repo
+
+WF contact:
+Manish, Sahib
+
+ 
+
+
+I do appreciate all the proactive effort being undertaken by you and the your team in assisting with the installation. 
+ 
+My recommendation is that for EY understand our procedures and requirements of the deployments.
+ 
+Action owner - Gary, Dan and Ran.
+ 
+ 
+ 
+#2: Per SDLC all unit test cases have to be documented and delivered to the QA team. These have to be independently verified by the QA team. Please ensure that you get together with Gary and understand the SDLC process.
+
+Steps:
+EY will document test cases and work with WF team to align testing process to QA requirements.
+
+WF contact:
+ 
+Action Item: Gary, Abhijit and Ran 
+ 
+#3: What level of security testing has been done? My assumption is that you are confirming to the Bank’s standards. There is training available at the Bank if you need additional information. 
+Steps:
+Dan, Gary & Manish have been leading process of incorporating external packages into WF env including necessary approvals. EY has also been working to provide alternative approaches to circumvent issues with importing external packages that are not present in WF approved repository. 
+WF contact:
+
+Assumptions: 
+Steps:
+
+
+EY has required dev env on VDI to develop and test codebase on WF env
+
+
+
+
+
+
+
+
+Dan, Gary & Manish 
+
+","
+
+#1 - list of packages that you provide should have included all dependencies (packages and sub-packages). this is relatively a new uncharted territory for the bank. i am again requesting that team ensure completeness of the prerequisite of the accelerators and work with architecture team to confirm the availability. 
+ 
+if you are making any assumptions, please call them out. we need to avoid future surprises and stay on track. each time we find something that is not accounted requires a fresh architecture review and that has the potential to impact our key milestones. 
+ 
+ey has provided wf with list of required packages for nlp, ml tasks for current sprint
+
+we provide the main package names (spacy, numpy etc.) in our list. these come with a standard set of prerequisite sub-packages but any missing sub-packages can still show up during installation process are due to platform differences, env setup 
+packages are installed to be readily imported into python. 
+any downloaded package source files for will be successfully compiled and installed.
+
+
+due to wf installation process and limited access to public repositories, any missing packages have to be identified in wf repo and individually installed. this is true for any sub-packages required by the main packages to be installed.
+ey has documented procedure for package installation and can provide expansive snapshot of  packages currently installed on server to successfully run codebase. this can be leveraged to setup new env 
+
+
+wf contact:
+sahib, manish
+
+timeline for code freeze:
+steps:
+complete development within the wells fargo network and env:
+get the python code into github: ey has identified approach to install github desktop client on vdi to push/pull code from required git repo. currently testing process
+
+deployment:  ey team is reviewing process and documentation on the automated cicd pipeline. sahib to lead deployment steps once ey developers push code base to git repo
+
+wf contact:
+manish, sahib
+
+ 
+
+
+i do appreciate all the proactive effort being undertaken by you and the your team in assisting with the installation. 
+ 
+my recommendation is that for ey understand our procedures and requirements of the deployments.
+ 
+action owner - gary, dan and ran.
+ 
+ 
+ 
+#2: per sdlc all unit test cases have to be documented and delivered to the qa team. these have to be independently verified by the qa team. please ensure that you get together with gary and understand the sdlc process.
+
+steps:
+ey will document test cases and work with wf team to align testing process to qa requirements.
+
+wf contact:
+ 
+action item: gary, abhijit and ran 
+ 
+#3: what level of security testing has been done? my assumption is that you are confirming to the bank’s standards. there is training available at the bank if you need additional information. 
+steps:
+dan, gary & manish have been leading process of incorporating external packages into wf env including necessary approvals. ey has also been working to provide alternative approaches to circumvent issues with importing external packages that are not present in wf approved repository. 
+wf contact:
+
+assumptions: 
+steps:
+
+
+ey has required dev env on vdi to develop and test codebase on wf env
+
+
+
+
+
+
+
+
+dan, gary & manish 
+
+"
+11,2020-02-26,Multiple docs,"
+High level of manual effort
+Doc is linked to 6 families
+Also terms extraction
+Every field needs to be a many-many
+In relativity has to be object instead of field
+How would you export out now -> challenge
+
+6 families linked 
+Which term is linked to 1 family
+Not just 1 doc -> cannot trace back to each field
+
+Proposed:
+Many-many
+Duplicate for each family
+6 copies- 6 doc objects
+Downstream -> have another field to relate those docs together
+
+How do you know the doc has to be duplicated
+ICMP -> 1 doc to multiple families
+
+
+Doc is loaded to relativity and then find out multiple families 
+How to duplicate in relativity
+Is someone can duplicate upstream, would be great
+
+Assumption:
+6 accounts -> 6 copies -> make 5 more from current -> Joe/Alex/CJ/Scott TODO get confirmation from WF (RC)
+Should we use number of accounts / number of entities -> how else would you be able to tell that 
+
+Needs to get duplicated at that level -> data storage level ECMD/NAS
+Push data into relativity should be simple -> assign 5 more GUID's to load into relativity
+
+
+For accelerator:
+When SEAL overlays -> concatenate account numbers to 1 record or will this be 3 separate records
+When ICMP/index store -> does it have 3 account numbers associated with a document
+Doc ID will be same, for account number will they be concatenated or will this be split into multiple rows
+
+Account number -> one of this (Obligation ID + loan ID ..) -> 1 per document -> Assumption
+When 1 ICMP send data -> every doc will have 1 record -> 1 doc with 1 account number
+1 doc will only have 1 account number
+1 account might be mapped to multiple docs
+
+
+
+
+Input 
+Assumptions
+","
+high level of manual effort
+doc is linked to 6 families
+also terms extraction
+every field needs to be a many-many
+in relativity has to be object instead of field
+how would you export out now -> challenge
+
+6 families linked 
+which term is linked to 1 family
+not just 1 doc -> cannot trace back to each field
+
+proposed:
+many-many
+duplicate for each family
+6 copies- 6 doc objects
+downstream -> have another field to relate those docs together
+
+how do you know the doc has to be duplicated
+icmp -> 1 doc to multiple families
+
+
+doc is loaded to relativity and then find out multiple families 
+how to duplicate in relativity
+is someone can duplicate upstream, would be great
+
+assumption:
+6 accounts -> 6 copies -> make 5 more from current -> joe/alex/cj/scott <h5>todo</h5> get confirmation from wf (rc)
+should we use number of accounts / number of entities -> how else would you be able to tell that 
+
+needs to get duplicated at that level -> data storage level ecmd/nas
+push data into relativity should be simple -> assign 5 more guid's to load into relativity
+
+
+for accelerator:
+when seal overlays -> concatenate account numbers to 1 record or will this be 3 separate records
+when icmp/index store -> does it have 3 account numbers associated with a document
+doc id will be same, for account number will they be concatenated or will this be split into multiple rows
+
+account number -> one of this (obligation id + loan id ..) -> 1 per document -> assumption
+when 1 icmp send data -> every doc will have 1 record -> 1 doc with 1 account number
+1 doc will only have 1 account number
+1 account might be mapped to multiple docs
+
+
+
+
+input 
+assumptions
+"
+12,2020-02-26,Address - notice,"
+Use zip code/NER location to anchor
+Still have to figure out the window
+","
+use zip code/ner location to anchor
+still have to figure out the window
+"
+13,2020-02-26,DB connection,"
+Freeze till end of Feb
+Can be Extended
+Exception process
+We will have to submit an exception -> for it to happen 
+
+Submitted it regularly
+Pushing to set it up on WF side
+Freeze -> 
+IT look a long time, document process
+
+Pending
+Firewall issues
+If we can wait till end of month
+The change can be implemented
+Let it run
+
+Internal testing
+Wait till Monday
+
+WF:
+On our side, we did this
+What you will have to do -> challenges we tried to overcome
+
+Otherwise: exception
+
+That change will go through tomorrow
+
+Write
+
+
+","
+freeze till end of feb
+can be extended
+exception process
+we will have to submit an exception -> for it to happen 
+
+submitted it regularly
+pushing to set it up on wf side
+freeze -> 
+it look a long time, document process
+
+pending
+firewall issues
+if we can wait till end of month
+the change can be implemented
+let it run
+
+internal testing
+wait till monday
+
+wf:
+on our side, we did this
+what you will have to do -> challenges we tried to overcome
+
+otherwise: exception
+
+that change will go through tomorrow
+
+write
+
+
+"
+14,2020-02-26,scrum,"
+Notes: 
+
+Relativity:
+Accelerator:
+
+Clustering module currently not operational use to missing Gensim python package
+Relativity DB connection module not operational due to pending approvals for DB access
+
+
+Multi-family doc
+
+Call scheduled later today -> will share discussion points with group following meeting
+
+
+
+
+Install is completed, troubleshooting some issues
+
+ 
+
+Git setup: Manish to investigate
+Missing packages: Sahib to reach out to Dan
+Familiarity and tasks for deployment process 
+Latest code shared with Gary via DTS – 
+
+ 
+","
+notes: 
+
+relativity:
+accelerator:
+
+clustering module currently not operational use to missing gensim python package
+relativity db connection module not operational due to pending approvals for db access
+
+
+multi-family doc
+
+call scheduled later today -> will share discussion points with group following meeting
+
+
+
+
+install is completed, troubleshooting some issues
+
+ 
+
+git setup: manish to investigate
+missing packages: sahib to reach out to dan
+familiarity and tasks for deployment process 
+latest code shared with gary via dts – 
+
+ 
+"
+15,2020-02-26,KIRA,"
+Why didn't it get the first instance
+
+Compare:
+Useful for tracking amended changes
+","
+why didn't it get the first instance
+
+compare:
+useful for tracking amended changes
+"
+16,2020-02-25,RSA,"
+Fall2020
+Ranzhou2 + RSA
+ 
+
+u749242
+","
+fall2020
+ranzhou2 + rsa
+ 
+
+u749242
+"
+17,2020-02-25,Relativity,"
+
+For floating docs:
+
+Amendment/Other
+Should not change batching process
+Can be displayed as metadata to the user
+DFA Clustering model predicts doc name
+
+
+Meeting tomorrow with DB team (Brian Ott, Raquel) to determine any further approvals needed
+Relativity team to :
+
+Rename fields and consolidate/update data dictionary
+Make sure approach - diagram and cases line up
 
 
 
 ","
-parabole
 
-currently uses dow jones api
-contexts within social, environment and governance
-news activity is captured using frequency and strength -- not sentiment analysis 
-disclosures are more important than news
-product mapping -> demo had industry mapping due to some data sharing constraints
+for floating docs:
 
-unsupervised learning model
-generates corpus -- standard agnostic sbas, gci 
-trains on narratives, new custom one can be readily trained
-pre-trained on 75k documents
-each step is validated at checkpoints 
-training is reviewed  manually using a random sample
-ocr is abbyy for scanning. disclosures are searchable pdf's to directly converted to text
-text is broken into paragraphs using their custom script
+amendment/other
+should not change batching process
+can be displayed as metadata to the user
+dfa clustering model predicts doc name
 
-ui is simple, actual use as platform
-multiple use cases - libor, tables
-nested tables - they have codebase
-highlights text within document 
-pii - classifier -- primary context, secondary context 
 
-azure, kubernetes
-readily scalable
-on-prem, integratable with aws
-integrated with sharepoint 
+meeting tomorrow with db team (brian ott, raquel) to determine any further approvals needed
+relativity team to :
 
-approach 
-wrap their baseline models into our solution
-augment models if required and business rules, post-processing layer
+rename fields and consolidate/update data dictionary
+make sure approach - diagram and cases line up
 
 
 
 "
-1,2020-02-21,server,"
-Only my profile on the server has packages + sample code that runs
+18,2020-02-24,Relativity,"
 
-WF recommends -> uninstall packages
+Unassigned docs 
+
+Amendment
+other
+
 
 
 ","
-only my profile on the server has packages + sample code that runs
 
-wf recommends -> uninstall packages
+unassigned docs 
+
+amendment
+other
+
 
 
 "
-2,2020-02-20,KIRA,"
+19,2020-02-24,Relativity,"
+
+","
+
+"
+20,2020-02-24,If SEAL overlay,"
+If SEAL overlay 
+LOB is difficult-> missing for accelerator pilot
+Cannot pull from ICMP
+MVP0-> mock LOB data -> risk item accelerator
+
+Txt file + folder structure
+accountNumber, doc ID, RC
+
+SEAL to consolidate metadata
+
+
+","
+if seal overlay 
+lob is difficult-> missing for accelerator pilot
+cannot pull from icmp
+mvp0-> mock lob data -> risk item accelerator
+
+txt file + folder structure
+accountnumber, doc id, rc
+
+seal to consolidate metadata
+
+
+"
+21,2020-02-24,IBM,"
+GBS -
+Yousef  -> congnitive servcies 
+ACD
+
+Documents
+
+Life insurance, disability claims
+
+APS, demand letters, claims data
+
+ACD/ACE
+
+Use cases for collaboration
+
+Who at EY owns IBM relationship
+How to partner
+
+EY and watson health already partnered
+Have teams follow-up
+
+
+
+
+
+
+","
+gbs -
+yousef  -> congnitive servcies 
+acd
+
+documents
+
+life insurance, disability claims
+
+aps, demand letters, claims data
+
+acd/ace
+
+use cases for collaboration
+
+who at ey owns ibm relationship
+how to partner
+
+ey and watson health already partnered
+have teams follow-up
+
+
+
+
+
+
+"
+22,2020-02-24,IBM,"
+Deal with Watson heath directly
+They are taking this to market
+
+In discussion with IBM 
+This class of capabilities
+Making service available for specific applications 
+They haven't tackled insurance yet 
+
+Creating pricing models
+Smaller number of bigger relationships
+Deeper relationships , not just develop, but partnership
+
+Ben-> offering manager for ACD
+Good timing
+In talks with other large consulting clients
+Insurance -> processes large volume of documents -> makes sense of use-case
+
+Partner
+Build applications and revenue share
+Lot of ways that we can structure this
+We have significant investment in technology
+
+Expertise is not is consulting, flow management
+IBM will be tech provider -> they power application  and EY will give application area
+We can work to scale 
+Datacap is also important in these types of applications
+Our customers, our deals, 
+IBM cloud service, + any other technology services
+
+Watson anywhere
+Running in IBM vs 
+Containerized -> platform agnostic
+Call it as service
+Package and set it up on another env
+
+IBM legacy -> cloud
+Fully IPPA enabled -> DB2, cloud object store
+
+Cloud service per volume of text model
+Challenge: its takes server customization 
+
+Once you have solid use-case/client
+Based on transaction volume
+Not some backend transaction system clubbed with support 
+
+Win-win
+EY has application area + business knowledge
+Applications worth millions dollars, and we can power
+
+EY->proposes
+By the document
+Easiest way -> to do it
+
+Training our people on using ACD
+Wouldn't take too long with background in AI tools + NLP
+Access to servers + tools -> can be given instantly
+
+IBM to help demo and show capabilities to EY 
+","
+deal with watson heath directly
+they are taking this to market
+
+in discussion with ibm 
+this class of capabilities
+making service available for specific applications 
+they haven't tackled insurance yet 
+
+creating pricing models
+smaller number of bigger relationships
+deeper relationships , not just develop, but partnership
+
+ben-> offering manager for acd
+good timing
+in talks with other large consulting clients
+insurance -> processes large volume of documents -> makes sense of use-case
+
+partner
+build applications and revenue share
+lot of ways that we can structure this
+we have significant investment in technology
+
+expertise is not is consulting, flow management
+ibm will be tech provider -> they power application  and ey will give application area
+we can work to scale 
+datacap is also important in these types of applications
+our customers, our deals, 
+ibm cloud service, + any other technology services
+
+watson anywhere
+running in ibm vs 
+containerized -> platform agnostic
+call it as service
+package and set it up on another env
+
+ibm legacy -> cloud
+fully ippa enabled -> db2, cloud object store
+
+cloud service per volume of text model
+challenge: its takes server customization 
+
+once you have solid use-case/client
+based on transaction volume
+not some backend transaction system clubbed with support 
+
+win-win
+ey has application area + business knowledge
+applications worth millions dollars, and we can power
+
+ey->proposes
+by the document
+easiest way -> to do it
+
+training our people on using acd
+wouldn't take too long with background in ai tools + nlp
+access to servers + tools -> can be given instantly
+
+ibm to help demo and show capabilities to ey 
+"
+23,2020-02-24,IBM,"
+Next steps: TODO
+
+Document at high level
+
+Solution concept
+What do you want to do
+Target clients etc.
+Make sure IBM has/can add what you need
+Size of market, ambitions
+
+Size of opportunity
+
+
+What % of value is this service
+Create win-win deal
+
+
+Get started:
+
+Pilot pricing 
+Limited document types/volume
+
+
+
+Gunjan -> NDA needed ? Greg Sarafin’s  team ?
+
+Identify right stake holders TODO
+
+
+Setup Internal demo -> reach out to Ben at IBM TODO
+What ACD does
+
+Layer it up and then go to partners
+
+Business and technical side what ACD does
+
+
+
+Yousef -> Will share use-cases
+
+
+","
+next steps: <h5>todo</h5>
+
+document at high level
+
+solution concept
+what do you want to do
+target clients etc.
+make sure ibm has/can add what you need
+size of market, ambitions
+
+size of opportunity
+
+
+what % of value is this service
+create win-win deal
+
+
+get started:
+
+pilot pricing 
+limited document types/volume
+
+
+
+gunjan -> nda needed ? greg sarafin’s  team ?
+
+identify right stake holders <h5>todo</h5>
+
+
+setup internal demo -> reach out to ben at ibm <h5>todo</h5>
+what acd does
+
+layer it up and then go to partners
+
+business and technical side what acd does
+
+
+
+yousef -> will share use-cases
+
+
+"
+24,2020-02-24,IBM,"
+Market potential TODO
+
+
+Setup meeting
+Chris, Marcela
+
+Yousef
+Will share use-cases
+
+Business and technical side what ACD does
+
+ 
+
+","
+market potential <h5>todo</h5>
+
+
+setup meeting
+chris, marcela
+
+yousef
+will share use-cases
+
+business and technical side what acd does
+
+ 
+
+"
+25,2020-02-24,"Fredrik is part of IBM’s Offering Management team and is responsible for go-to-market related activities for IBM Watson’s Application and Solutions portfolio. In this role he collaborates with clients, business partners, and IBM marketing and sales to cre","
+Form generation
+
+Approach for GTM
+
+Extract info and generate summary
+
+DI + IBM Watson
+Pyramid does info extraction
+
+Underwriting
+Medical info
+Put in risk bucket -> calculate premiums accordingly
+
+Use DI to automate 
+Extract from medical docs and automate for underwriters
+
+
+
+","
+form generation
+
+approach for gtm
+
+extract info and generate summary
+
+di + ibm watson
+pyramid does info extraction
+
+underwriting
+medical info
+put in risk bucket -> calculate premiums accordingly
+
+use di to automate 
+extract from medical docs and automate for underwriters
+
+
+
+"
+26,2020-02-24,"Fredrik is part of IBM’s Offering Management team and is responsible for go-to-market related activities for IBM Watson’s Application and Solutions portfolio. In this role he collaborates with clients, business partners, and IBM marketing and sales to cre","
+Fredrik is part of IBM’s Offering Management team and is responsible for go-to-market related activities for IBM Watson’s Application and Solutions portfolio. In this role he collaborates with clients, business partners, and IBM marketing and sales to create and optimize business value, and drive consumption of IBM Watson’s Applications and Solutions.
+
+Prior to this role, Fredrik managed the Client Engagement team for the Watson Client Experience Centers across North America. In this role he was responsible for assisting clients, partners, and media understand the technology and business value of IBM Watson and the IBM Cloud.
+Before joining IBM he worked as an industry analyst at Ovum, where he researched and delivered advisory services on trends and strategies in business intelligence, analytics, data visualization, and Big Data.
+
+Throughout his career Fredrik has served in several technical, consultancy, and project management roles. Fredrik has broad technical and strategic understanding of everything from application development and data management to the more high-level human-computer interaction, and has gained expertise in industries ranging from financial services to health to retail.
+
+Fredrik also holds an MSc in Cognitive Neuroscience from Columbia University.
+
+
+From <https://www.linkedin.com/in/fredriktunvall/> 
+","
+fredrik is part of ibm’s offering management team and is responsible for go-to-market related activities for ibm watson’s application and solutions portfolio. in this role he collaborates with clients, business partners, and ibm marketing and sales to create and optimize business value, and drive consumption of ibm watson’s applications and solutions.
+
+prior to this role, fredrik managed the client engagement team for the watson client experience centers across north america. in this role he was responsible for assisting clients, partners, and media understand the technology and business value of ibm watson and the ibm cloud.
+before joining ibm he worked as an industry analyst at ovum, where he researched and delivered advisory services on trends and strategies in business intelligence, analytics, data visualization, and big data.
+
+throughout his career fredrik has served in several technical, consultancy, and project management roles. fredrik has broad technical and strategic understanding of everything from application development and data management to the more high-level human-computer interaction, and has gained expertise in industries ranging from financial services to health to retail.
+
+fredrik also holds an msc in cognitive neuroscience from columbia university.
+
+
+from <https://www.linkedin.com/in/fredriktunvall/> 
+"
+27,2020-02-20,KIRA,"
 
 API and technical: 
 KIRA 
@@ -208,7 +1123,7 @@ meet ran and jan about next steps poc evaluation meeting
 check with other users about access
 evaluation criteria sheet
 "
-3,2020-02-20,KIRA,"
+28,2020-02-20,KIRA,"
 EY:
 Teams have created accounts 
 Evaluation criteria review undergoing
@@ -267,7 +1182,7 @@ deployment option --- affecting capabilities required
 dev instance, prod instance setup
 
 "
-4,2020-02-20,KIRA,"
+29,2020-02-20,KIRA,"
 Business case TODO
 
 Co-Develop use case
@@ -380,590 +1295,112 @@ ocr -> takes very long -> ateast a 100 pages
 
 
 "
-5,2020-02-21,Relativity server,"
-EDF team 
-GJ
+30,2020-02-20,KIRA,"
+Slide 1
+
+What is KIRA does
+does not have outer post-processing layer and rules engine
+
+Use cases for collaboration
+SEAL: currently LIBOR
+KIRA: contract heavy documents
+
+
+Where we can work
+
+Slide 2
+
+Delivery Considerations
+Build solution on top of what we have
+License base models + create out IP on top
+
+
+Scenarios
+
+Check what options KIRA offers 
+List some for slide pg13-15 in LIBOR workshop ppt
+
+
+Global vs legal entity collaboration
+Onboarding on client side with take long if needed
+
+
+Slide 3
+
+Insights & Evaluation
+
+Is there OCR vendor
+Model questions -> Neural networks
+
+Comparison between
+
+
+Dicr vs adam vs kira
+Adam-> rules based
+Inference time -> DICR takes very long
+OCR -> takes very long -> ateast a 100 pages
+
+
+
+
+
+
+
+2 slide
 
 
 ","
-edf team 
-gj
+slide 1
 
+what is kira does
+does not have outer post-processing layer and rules engine
 
-"
-6,2020-02-19,relativity,"
-Follow up from previous meeting:
-Dedupe -> within SEAL 
-Xml to txt
-Rashmi will follow up -- 
-SQL DB <-> python on WF
+use cases for collaboration
+seal: currently libor
+kira: contract heavy documents
 
-Match CS001, CS001 as same groupID by defult -> assumption*
-Or should we keep it as noe
-Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
 
+where we can work
 
-Answered -- *
+slide 2
 
-How is review being done ? 
-Look at other docs ?
+delivery considerations
+build solution on top of what we have
+license base models + create out ip on top
 
-Business has to tell which level to roll up on 
 
-Text format export- relativity
+scenarios
 
-Final solution on single doc - multiple records
-Lester rashmi talk
-","
-follow up from previous meeting:
-dedupe -> within seal 
-xml to txt
-rashmi will follow up -- 
-sql db <-> python on wf
+check what options kira offers 
+list some for slide pg13-15 in libor workshop ppt
 
-match cs001, cs001 as same groupid by defult -> assumption*
-or should we keep it as noe
-or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
 
+global vs legal entity collaboration
+onboarding on client side with take long if needed
 
-answered -- *
 
-how is review being done ? 
-look at other docs ?
+slide 3
 
-business has to tell which level to roll up on 
+insights & evaluation
 
-text format export- relativity
+is there ocr vendor
+model questions -> neural networks
 
-final solution on single doc - multiple records
-lester rashmi talk
-"
-7,2020-02-19,relativity,"
+comparison between
 
-","
 
-"
-8,2020-02-20,server,"
-application server account
+dicr vs adam vs kira
+adam-> rules based
+inference time -> dicr takes very long
+ocr -> takes very long -> ateast a 100 pages
 
-sql server local account
 
 
-Add users to ECMD_admin AD group with DB
 
 
 
-Add users to this group
-no humans in service account
-Create domain account with read privileges TODO
 
-Art request - separate local sql account for accelerator - read/write/update  TODO
-
-Art request to add groups to AD
-
-
-
-
-
-","
-application server account
-
-sql server local account
-
-
-add users to ecmd_admin ad group with db
-
-
-
-add users to this group
-no humans in service account
-create domain account with read privileges <h5>todo</h5>
-
-art request - separate local sql account for accelerator - read/write/update  <h5>todo</h5>
-
-art request to add groups to ad
-
-
-
-
-
-"
-9,2020-02-20,server,"
-
-","
-
-"
-10,2020-02-20,DFA story,"
-P1 – approach overview:
-
-Brief description and objective  (e.g. run 20 documents through SEAL vs. Ground truth etc. – can borrow from the daily status email)
-Input – also attached our input files: 
-
-Doc samples
-Input terms : ICMP Vs. SEAL
-Doc Hierarchy Matrix
-
-
-Four use cases framework
-Output – attach the two output files --- After all the discussed changes are determined
-
-Doc Family output (contract set ID, Group ID, completeness check etc.) Vs. indication for Relativity
-
-
-
- 
-P2 – Results Analysis (comparison of current Vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, ICMP data – the one CJ discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
-P3 – Areas of improvement & next steps and prioritization items (corresponding to painpoints)
-","
-p1 – approach overview:
-
-brief description and objective  (e.g. run 20 documents through seal vs. ground truth etc. – can borrow from the daily status email)
-input – also attached our input files: 
-
-doc samples
-input terms : icmp vs. seal
-doc hierarchy matrix
-
-
-four use cases framework
-output – attach the two output files --- after all the discussed changes are determined
-
-doc family output (contract set id, group id, completeness check etc.) vs. indication for relativity
-
-
-
- 
-p2 – results analysis (comparison of current vs. target state, in target, how many would be matched by what)  & painpoints (seal extraction results, icmp data – the one cj discussed could be a good one to put here, confidence level to be developed, what business requirements should still be identified etc.)
-p3 – areas of improvement & next steps and prioritization items (corresponding to painpoints)
-"
-11,2020-02-19,Storyline,"
-Findings
-
-Assessment
-
-ICMP, seal data is not good
-
-% change
-Improvement of accuracy from baseline to ideal
-
-How many teams are matched on
-","
-findings
-
-assessment
-
-icmp, seal data is not good
-
-% change
-improvement of accuracy from baseline to ideal
-
-how many teams are matched on
-"
-12,2020-02-19,Storyline,"
-Overall threshold
-
-Date + principal + LE
-
-Give you more false postivei
- not linked by family but date
-Even if 1 match -> easier for review
-","
-overall threshold
-
-date + principal + le
-
-give you more false postivei
- not linked by family but date
-even if 1 match -> easier for review
-"
-13,2020-02-19,Storyline,"
-Business input :
-Create hierarchy matrix for document types for RC, SBU -> L1,L2,L3
-terms to match on + confidence for RC, SBU -> order of importance and weight
-
-UID's for each SBU
-Flag in accelerator to set if we should use UID -> determine the level at which level loan/account
-
-Columns align with relativity workflow for linkage
-Proposed -> Validated columns for review process
-P/C flags for parent/child ID
-GroupID -> AccountLevel, ContractSetID -> Loan Level
-
-Current SEAL assessment and  & pre-processing 
-
-We tested on 20 docs from SEAL dev + Linda ICMP
-
-Date Normalization: Current SEAL answer field has no output and interim field has unnormalized dates as well. 
-LE: SEAL captures parties in intermediate field 
-Principal: Commitment identified. Accelerator expects normalized value
-Address: TODO
-
-From current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
-
-Match on LE -> some will match
-Match on date & principal 
-
-Subset of these will match to give most coverage
-
-1 doc -> multiple accounts based on legal entities
-
-4 use cases:
-   From sample set used for testing. CRE had metadata for case-1 and consumer did not
-   Accuracy of accelerator will improve with expected input for Seal and Metadata -> with agreement-name fuzzy, + normalized date + normalized principal
-
-Account roll up matches on LE between contract sets -> current exact matches only -> need fuzzy TODO
-    during batching, an incomplete contract set (CS_002) is sent back in again with new (CS__00N) but (CS_002) is now gone/trashed, will not be used again
-
-ParentChildID works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
-
-Next steps:
-Incorporate terms matching + confidence score TODO
-Address matching TODO
-
-
-","
-business input :
-create hierarchy matrix for document types for rc, sbu -> l1,l2,l3
-terms to match on + confidence for rc, sbu -> order of importance and weight
-
-uid's for each sbu
-flag in accelerator to set if we should use uid -> determine the level at which level loan/account
-
-columns align with relativity workflow for linkage
-proposed -> validated columns for review process
-p/c flags for parent/child id
-groupid -> accountlevel, contractsetid -> loan level
-
-current seal assessment and  & pre-processing 
-
-we tested on 20 docs from seal dev + linda icmp
-
-date normalization: current seal answer field has no output and interim field has unnormalized dates as well. 
-le: seal captures parties in intermediate field 
-principal: commitment identified. accelerator expects normalized value
-address: <h5>todo</h5>
-
-from current sample: dates & principal especially if they are multiple have most variability -> in tables etc. 
-
-match on le -> some will match
-match on date & principal 
-
-subset of these will match to give most coverage
-
-1 doc -> multiple accounts based on legal entities
-
-4 use cases:
-   from sample set used for testing. cre had metadata for case-1 and consumer did not
-   accuracy of accelerator will improve with expected input for seal and metadata -> with agreement-name fuzzy, + normalized date + normalized principal
-
-account roll up matches on le between contract sets -> current exact matches only -> need fuzzy <h5>todo</h5>
-    during batching, an incomplete contract set (cs_002) is sent back in again with new (cs__00n) but (cs_002) is now gone/trashed, will not be used again
-
-parentchildid works well -> we have simple cases built now and have been building more complicated cases. we may have outliers
-
-next steps:
-incorporate terms matching + confidence score <h5>todo</h5>
-address matching <h5>todo</h5>
-
-
-"
-14,2020-02-06,KIRA,"
-asynchronous  API calls
-
-How to embed charts into workspace
-
-Modular, where parts can be leveraged
-
-How long to set up POC
-Prod ready
-
-
-
-","
-asynchronous  api calls
-
-how to embed charts into workspace
-
-modular, where parts can be leveraged
-
-how long to set up poc
-prod ready
-
-
-
-"
-15,2020-02-06,KIRA,"
-KIRA 
-
-End to end upload API
-Document intelligence
-
-Specific locations, metadata
-Metadata integration
-
-Review 
-Export options summary excel files
-Pdf exports
-
-Look at API's calls 
-ID's, numerical files
-
-What
-
-Batching, 
-
-How will you configure schedule jobs 
-
-AES 26 encryption data 
-
-
-
-Meet Ran and Jan about next steps POC evaluation meeting
-Check with other users about access
-Evaluation criteria sheet
-","
-kira 
-
-end to end upload api
-document intelligence
-
-specific locations, metadata
-metadata integration
-
-review 
-export options summary excel files
-pdf exports
-
-look at api's calls 
-id's, numerical files
-
-what
-
-batching, 
-
-how will you configure schedule jobs 
-
-aes 26 encryption data 
-
-
-
-meet ran and jan about next steps poc evaluation meeting
-check with other users about access
-evaluation criteria sheet
-"
-16,2020-02-19,Accelerator,"
-Create sample static file for terms to match and confidence score
-
-Test this on accelerator script
-
-TODO
-
-
-","
-create sample static file for terms to match and confidence score
-
-test this on accelerator script
-
-<h5>todo</h5>
-
-
-"
-17,2020-02-19,Business questions,"
-CJ questions
-
-Is L1 optional for some types ?
-
-Cases where L2->L3 is the only one where they translate to L1->L2
-","
-cj questions
-
-is l1 optional for some types ?
-
-cases where l2->l3 is the only one where they translate to l1->l2
-"
-18,2020-02-19,Business questions,"
-UID for loan level or none -- confirm
-
-Double match -- flag this in accelerator TODO
-
-
-
-
-","
-uid for loan level or none -- confirm
-
-double match -- flag this in accelerator <h5>todo</h5>
-
-
-
-
-"
-19,2020-02-19,Business questions,"
-V1 within doc ID 
-How to strip ContractID from text
-
-
-Exact match
-
-CRE + consumer +CMS -> Loan number is contractID
-
-
-
-
-","
-v1 within doc id 
-how to strip contractid from text
-
-
-exact match
-
-cre + consumer +cms -> loan number is contractid
-
-
-
-
-"
-20,2020-02-19,WIM,"
-No fields currently answer
-Dates are detected
-Not agreement name
-
-Addresses are not captured
-
-Show them contracts
-Walk them through fields you're looking for
-
-
-
-
-","
-no fields currently answer
-dates are detected
-not agreement name
-
-addresses are not captured
-
-show them contracts
-walk them through fields you're looking for
-
-
-
-
-"
-21,2020-02-19,Relativity questions,"
-Match by LE mark differently
-
-Match CS001, CS001 as same groupID by defult -> assumption
-Or should we keep it as noe
-Or should we mark it differently (EX- G_001) to show that we haven't  matched on LE but only due to CS001 being the same
-
-How is review being done ?
-Look at other docs ?
-","
-match by le mark differently
-
-match cs001, cs001 as same groupid by defult -> assumption
-or should we keep it as noe
-or should we mark it differently (ex- g_001) to show that we haven't  matched on le but only due to cs001 being the same
-
-how is review being done ?
-look at other docs ?
-"
-22,2020-02-19,Relativity questions,"
-
-","
-
-"
-23,2020-02-19,SEAL WIM,"
-Clearing linkage
-
-Fields:
-Date (of clearing agreement)
-Broker Name 
-Clearing Firm Name
-Broker Address
-Clearing Firm Address
-Date (of Amendment & Schedule A)
-Maturity Date
-
-Agreement
-No agreement name -> captured in contractType
-LE: captured, contract mentions roles but not SEAL
-Start date: captured
-Address: broker and first clearing address mentioned separately in doc
-
-
-Schedule A
-No agreement name
-Start date: captured
-Maturity Date: multiple captured correct
-LE: captured: need to see who is broker and who is clearing firm
-","
-clearing linkage
-
-fields:
-date (of clearing agreement)
-broker name 
-clearing firm name
-broker address
-clearing firm address
-date (of amendment & schedule a)
-maturity date
-
-agreement
-no agreement name -> captured in contracttype
-le: captured, contract mentions roles but not seal
-start date: captured
-address: broker and first clearing address mentioned separately in doc
-
-
-schedule a
-no agreement name
-start date: captured
-maturity date: multiple captured correct
-le: captured: need to see who is broker and who is clearing firm
-"
-24,2020-02-19,Address -> enhancements,"
-Address -> enhancements
-","
-address -> enhancements
-"
-25,2020-02-18,relativity,"
-Fields <-> relativity database
-
-SEAL
-Dedupe scripts
-
-Where dedupe
-Where the txt xml script sit ?
-TODO accelerator to get back
-
-
-RC, SBU to be added relativity
-TODO accelerator share
-TODO excel share static files xls
-
-Load static files into custom objects/ table
-
-
-
-","
-fields <-> relativity database
-
-seal
-dedupe scripts
-
-where dedupe
-where the txt xml script sit ?
-<h5>todo</h5> accelerator to get back
-
-
-rc, sbu to be added relativity
-<h5>todo</h5> accelerator share
-<h5>todo</h5> excel share static files xls
-
-load static files into custom objects/ table
-
+2 slide
 
 
 "
