@@ -1,7 +1,7 @@
 import os
 
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+CLIENT_ID = "5d69341c-d7d7-4a3f-8c10-aead276f5ff6"
+CLIENT_SECRET = "24t0AOlEdr[eH2:axXZo]fm:Q1f:-Xu_"
 AUTHORITY = "https://login.microsoftonline.com/common"
 
 REDIRECT_PATH = "/getAToken"  
