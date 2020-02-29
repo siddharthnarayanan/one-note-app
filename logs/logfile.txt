@@ -1,1 +1,0 @@
-2020-02-29 13:57:38,218 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
