@@ -7,7 +7,6 @@ import re
 import app_config
 from bs4 import BeautifulSoup
 import warnings
-import logging
 import pandas as pd
 from pivottablejs import pivot_ui
 
@@ -112,9 +111,6 @@ def content(contentUrlList):
             session["user"]['iss']+'/me/photo',
             headers={'Authorization': 'Bearer ' + token['access_token']},
             ).text
-
-    print("session['user']['iss']: ", session["user"]['iss']+'/me/photo')
-    print('pic_data: ', pic_data)
 
     if not token:
         return redirect(url_for("login"))
