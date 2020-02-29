@@ -27,8 +27,6 @@ def index():
 @app.route("/login")
 def login():
     session["state"] = str(uuid.uuid4())
-    # Technically we could use empty list [] as scopes to do just sign in,
-    # here we choose to also collect end user consent upfront
     auth_url = _build_auth_url(scopes=app_config.SCOPE, state=session["state"])
     return render_template("login.html", auth_url=auth_url, version=msal.__version__)
 
@@ -135,20 +133,12 @@ def content(contentUrlList):
         list = soup.findAll('div')
         final_text=''
         for i,list_item in enumerate(list):
-            #print('list_item: ', list_item)
             output_text = ''.join(text for text in list_item.find_all(text=True, recursive=True))
             final_text += output_text+'\n'
-            #data_df = data_df.append({"date":output,"notes":output_text}, ignore_index=True)
-            #data_df = data_df[["date","notes"]]
-            #data_df.loc[i]["Date"] = output
             todo_text = get_todo_color(output_text)
-
             data_df.loc[len(data_df)] = [output.split('T')[0], url_list_item['title'], output_text, todo_text]
-            #row = [output, output_text]
-            #data_df.loc[-1] = [output, output_text]
 
 
-    #data_df = data_df.drop(data_df.columns[[1]],axis=1)
     print('data_df: ', data_df)
 
     pivot_ui(data_df, outfile_path='pivottablejs.html')
@@ -165,12 +155,7 @@ def pagescontent():
         headers={'Authorization': 'Bearer ' + token['access_token']},
         ).json()
 
-
-    #print('graph_data: ', graph_data)
-
-    #for list_item in graph_data['value']:
-    #    return content(list_item['contentUrl'])
-    return content(graph_data['value']) #return render_template('display.html', result=graph_data) # # #
+    return content(graph_data['value']) 
 
 
 @app.route("/pages")
@@ -183,7 +168,6 @@ def pages():
         headers={'Authorization': 'Bearer ' + token['access_token']},
         ).json()
 
-    
     return render_template('display.html', result=graph_data) # # #
 
 
