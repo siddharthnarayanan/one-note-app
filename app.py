@@ -7,6 +7,7 @@ import re
 import app_config
 from bs4 import BeautifulSoup
 import warnings
+import logging
 import pandas as pd
 from pivottablejs import pivot_ui
 
@@ -140,8 +141,6 @@ def content(contentUrlList):
 
 
     print('data_df: ', data_df)
-
-    pivot_ui(data_df, outfile_path='pivottablejs.html')
     return render_template('display_new.html', tables=data_df, titles=data_df.columns.values, user=session["user"], version=msal.__version__)
 
 
