@@ -19,9 +19,9 @@ Context discovery in notes is currently difficult, time-consuming, and often fru
 We will create a baseline skeleton code base and interface to retrieve user notes, which can then be fed to downstream machine learning and natural language processing algorithms for insights. Once completed, the next step is to develop a methodology to predict the next logical step for each task sub-activity in the workflow.
 
 **Assumptions**
-a. Contiguous text blocks (paragraphs, lists) belong to same sub-activity
-b. Notes contains labels (TODO, action item, team name etc.) for context
-c. Current API only picks from last ~7 days
+* Contiguous text blocks (paragraphs, lists) belong to same sub-activity
+* Notes contains labels (TODO, action item, team name etc.) for context
+* Current API only picks from last ~7 days
 
 ### Approach outline
 1. Track activities in a day at section level
