@@ -1,18 +1,6 @@
 # OneNote App
 
-# To run application:  
-1. Clone repo 
-2. Add your ClientID and Secret in **app_config.py**
-3. Run ```python app.py``` in the directory
-
-![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/ui_1.jpg)
-
-# To create new application:
-Go to https://portal.azure.com/?quickstart and download the sample bootstrap python application. Register an a new app if needed (As shown below, **one-note** was made for this example). You will also have to grant it the correct API permissions for OneNote.
-
-![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/azure_api.png)
-
-# Making Notes Useful: Experiments with OneNote
+## Making Notes Useful: Experiments with OneNote
 Machine learning is now widely used to discover insights and relationships from user data. Applications can identify the required language, extract key phrases and entities, retrieve a positive or negative sentiment associated with the text and automatically organize data (by time, topics, content etc.). The focus of this project is to explore how machine learning can be applied to user notes to capture insights.
 
 1. Create skeleton to retrieve required details from OneNote API.
@@ -21,6 +9,18 @@ Machine learning is now widely used to discover insights and relationships from 
 Currently only (1) has been implemented. The code can be found here.
 
 The note-taking application used for this project is OneNote and a significant portion of the content related to project management tasks such as flagging open questions, tracking action items, summarizing meeting minutes etc. This project tries to automate the more trivial tasks like predicting next activity or sub-activity in the workflow, track open items etc. and use data points from previous notes items to inform (and ideally automate) future steps in the workflow. More simply, the application should be able to tell you your work items everyday (or a timescale or your choice). While there are several popular project management tools available (some of which may even include this feature in some sense), this effort is centered around the analysis of note content from an ML and NLP perspective to gain useful insights and not so much from a project management perspective.
+
+## To run application:  
+1. Clone repo 
+2. Add your ClientID and Secret in **app_config.py**
+3. Run ```python app.py``` in the directory
+
+![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/ui_1.jpg)
+
+## To create new application:
+Go to https://portal.azure.com/?quickstart and download the sample bootstrap python application. Register an a new app if needed (As shown below, **one-note** was made for this example). You will also have to grant it the correct API permissions for OneNote.
+
+![notes timeline](https://github.com/siddharthnarayanan/one-note-manager/blob/siddharth_dev/docs/azure_api.png)
 
 ## Context discovery
 Context discovery in notes is currently difficult, time-consuming, and often frustrating due to the effort it takes to reveal useful or pertinent information from our notes. Today's note-taking apps are designed as digital storage buckets that require diligent organization to find information easily. Additionally, the inputs to the task of information discovery are vague. Here are some considerations:
