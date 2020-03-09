@@ -1,6 +1,5 @@
-# OneNote App
+# OneNote App Experiment
 
-## Making Notes Useful: Experiments with OneNote
 Machine learning is now widely used to discover insights and relationships from user data. Applications can identify the required language, extract key phrases and entities, retrieve a positive or negative sentiment associated with the text and automatically organize data (by time, topics, content etc.). The focus of this project is to explore how machine learning can be applied to user notes to capture insights.
 
 1. Create skeleton to retrieve required details from OneNote API.
