@@ -34,9 +34,9 @@ c. Current API only picks from last ~7 days
 
 ### Version 0
 Simple tasks such as:
-a. Reaching out to contact
-b. Setting up meetings
-c. Adding to running list of open questions etc.
+1. Reaching out to contact
+2. Setting up meetings
+3. Adding to running list of open questions etc.
 Note: Depending on the gaps in data, the effort may also need integration with Outlook API for aggregation of mailbox information (mails, meetings, tasks etc.) to help inform current activity, sub-activity and next steps
 
 ## References
