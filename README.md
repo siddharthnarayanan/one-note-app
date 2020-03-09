@@ -18,10 +18,10 @@ Context discovery in notes is currently difficult, time-consuming, and often fru
 ## Experiments
 We will create a baseline skeleton code base and interface to retrieve user notes, which can then be fed to downstream machine learning and natural language processing algorithms for insights. Once completed, the next step is to develop a methodology to predict the next logical step for each task sub-activity in the workflow.
 
-#### Assumptions
-Contiguous text blocks (paragraphs, lists) belong to same sub-activity
-Notes contains labels (TODO, action item, team name etc.) for context
-Current API only picks from last ~7 days
+**Assumptions**
+a. Contiguous text blocks (paragraphs, lists) belong to same sub-activity
+b. Notes contains labels (TODO, action item, team name etc.) for context
+c. Current API only picks from last ~7 days
 
 ### Approach outline
 1. Track activities in a day at section level
@@ -40,10 +40,10 @@ c. Adding to running list of open questions etc.
 Note: Depending on the gaps in data, the effort may also need integration with Outlook API for aggregation of mailbox information (mails, meetings, tasks etc.) to help inform current activity, sub-activity and next steps
 
 ## References
-https://medium.com/@mylesmcginley/ai-meets-your-notebook-8c2228e0d701
-https://teamworkiq.com/assign-tasks-from-meeting-minutes/
-https://www.wrike.com/blog/action-items-with-meeting-notes-template/
-https://www.searchtechnologies.com/blog/natural-language-processing-techniques
-https://asana.com/guide/resources/info-sheets/everyday-workflows
-https://docs.microsoft.com/en-us/graph/integrate-with-onenote
-https://portal.azure.com/?quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade
+1. https://medium.com/@mylesmcginley/ai-meets-your-notebook-8c2228e0d701
+2. https://teamworkiq.com/assign-tasks-from-meeting-minutes/
+3. https://www.wrike.com/blog/action-items-with-meeting-notes-template/
+4. https://www.searchtechnologies.com/blog/natural-language-processing-techniques
+5. https://asana.com/guide/resources/info-sheets/everyday-workflows
+6. https://docs.microsoft.com/en-us/graph/integrate-with-onenote
+7. https://portal.azure.com/?quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade
